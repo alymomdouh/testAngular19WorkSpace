@@ -64,5 +64,6 @@ For more information on using the Angular CLI, including detailed command refere
 
 ```
 -  ng new testAngularWorkSpace --no-create-application
+-ng g app angular19StartupProject 
 
 ```
