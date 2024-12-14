@@ -63,7 +63,11 @@ For more information on using the Angular CLI, including detailed command refere
 ##  important Commands 
 
 ```
+
 -  ng new testAngularWorkSpace --no-create-application
--ng g app angular19StartupProject 
--ng g module App --routing
+-  ng g app angular19StartupProject 
+-  ng g module App --routing
+-  ng new testpprojectwithModules --no-standalone
+
 ```
+
