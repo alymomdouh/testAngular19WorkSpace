@@ -68,6 +68,6 @@ For more information on using the Angular CLI, including detailed command refere
 -  ng g app angular19StartupProject 
 -  ng g module App --routing
 -  ng new testpprojectwithModules --no-standalone
-
+-  ng g directive directiveName 
 ```
 
