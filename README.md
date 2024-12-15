@@ -70,6 +70,6 @@ For more information on using the Angular CLI, including detailed command refere
 -  ng new testpprojectwithModules --no-standalone
 -  ng g directive directiveName
 -  ng g pipe pipeName
-
+-  ng g service product
 ```
 
