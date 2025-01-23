@@ -73,4 +73,14 @@ For more information on using the Angular CLI, including detailed command refere
 -  ng g service product
 -  npx -p @angular/cli@18.0.0 ng new testpro18Demo
 ```
+##  Importants Websites 
+- Angular io: https://angular.io/
+- Angular Dev: https://angular.dev/
+- Node Js: https://nodejs.org/en/download/
+- Visual Studio Code: https://code.visualstudio.com/download
 
+Important commands:
+- Run this command to install Angular Cli globally: ``` npm install @angular/cli@17.1.1 -g ``` 
+- Run this command to check Node version: ``` node -v ```
+- Run this command to check Angular version: ``` ng v ```
+- Run this command to check NPM version: ``` npm -v ```
