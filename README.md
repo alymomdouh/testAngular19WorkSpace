@@ -72,6 +72,9 @@ For more information on using the Angular CLI, including detailed command refere
 -  ng g pipe pipeName
 -  ng g service product
 -  npx -p @angular/cli@18.0.0 ng new testpro18Demo
+-ng g m shared
+-ng g m shared --flat
+
 ```
 ##  Importants Websites 
 - Angular io: https://angular.io/
