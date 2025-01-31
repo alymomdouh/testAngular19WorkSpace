@@ -87,3 +87,39 @@ Important commands:
 - Run this command to check Node version: ``` node -v ```
 - Run this command to check Angular version: ``` ng v ```
 - Run this command to check NPM version: ``` npm -v ```
+
+##  course Path
+###   -[link in youtube](https://www.youtube.com/playlist?list=PLgU7izgeR2lwwNRNY4fYQf3GZawV-EGnW)
+  
+###   -[link in Udemy](https://www.udemy.com/course/angular-17-the-complete-guide-2024/)
+######  section 1  Getting Start to the Angular
+  1-2-3-
+######  section 2 Mastering Angular CLI (command-line interface)
+  4-5-6-7-
+######  section 3 Understanding Angular Project Structure
+  8-9-
+######  section 4 Introduction to Angular Framework
+  10-11-12-
+######  section 5 Core Features
+  13- =>>>>    26-
+######  section 6 Angular Built-In Pipes
+  27-28-29-
+######  section 7 Component Lifecycle Hook
+  30-  ==>>>>>   37-
+######  section 8 Angular Routing  (9)
+  38-   46-
+######  section 9 Angular Dependency Injection (DI)   (1)
+  47- 
+######  section 10  Learn Angular HTTP (5)
+  48-        52-
+######  section 11 Angular Sharing Modules  (1)
+  53-
+######  section 12  Angular Forms (10)
+  54-       63- 
+######  section 13 Translate Angular App with ngx-translate  (7)
+  64-     70- 
+14 Reactive Form in Depth 7
+
+
+  
+  
