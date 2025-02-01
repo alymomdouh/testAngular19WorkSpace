@@ -121,5 +121,8 @@ Important commands:
 14 Reactive Form in Depth 7
 
 ######  Section 19: ResolveFn vs Resolve (Deprecated) 
-  
-  
+  96-Angular Routing ResolveFn vs Resolve (Deprecated)
+  // may be put in guards folder and can be put in new folder called resolvers
+  - ng g resolver resolvers/course 
+  // video not completed yet
+
