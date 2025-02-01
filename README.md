@@ -93,7 +93,34 @@ Important commands:
   
 ###   -[link in Udemy](https://www.udemy.com/course/angular-17-the-complete-guide-2024/)
 ######  Section 1  Getting Start to the Angular
-  1-2-3-
+   1. Introduction to the Angular
+   ```
+        - Angular io: https://angular.io/
+        - Angular Dev: https://angular.dev/
+        - Node Js: https://nodejs.org/en/download/
+        - Visual Studio Code: https://code.visualstudio.com/download
+
+        Important commands:
+        - Run this command to install Angular Cli globally: npm install @angular/cli@17.1.1 -g 
+        - Run this command to check Node version: node -v 
+        - Run this command to check Angular version: ng v 
+        - Run this command to check NPM version: npm -v
+   ```
+   2. Execution of scripts is disabled on this system
+   
+          ```
+                Set-ExecutionPolicy RemoteSigned
+          ```
+  3. Development Environment Setup
+  ```
+  >>>ng new project-name 
+      -style select scss 
+       not select ssrand ssg 
+  >>ng serve -o 
+  >>npm start 
+
+  ```
+
 ######  Section 2 Mastering Angular CLI (command-line interface)
   4-5-6-7-
 ######  Section 3 Understanding Angular Project Structure
@@ -121,8 +148,9 @@ Important commands:
 14 Reactive Form in Depth 7
 
 ######  Section 19: ResolveFn vs Resolve (Deprecated) 
+```
   96-Angular Routing ResolveFn vs Resolve (Deprecated)
   // may be put in guards folder and can be put in new folder called resolvers
   - ng g resolver resolvers/course 
   // video not completed yet
-
+```
