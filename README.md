@@ -164,7 +164,9 @@ Important commands:
       >ng g c login --prefix  // not add prefix app to component name
       >ng g c login -p  // not add prefix app to component name
       >ng g c login --prefix=auth // add prefix auth to component name
+
     ``` 
+    
 ######  Section 3 Understanding Angular Project Structure
  
 8. Understanding Angular Project Structure Part 1
