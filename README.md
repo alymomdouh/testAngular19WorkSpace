@@ -107,7 +107,6 @@ Important commands:
         - Run this command to check NPM version: npm -v
    ```
    2. Execution of scripts is disabled on this system
-   
           ```
                 Set-ExecutionPolicy RemoteSigned
           ```
@@ -122,7 +121,50 @@ Important commands:
   ```
 
 ######  Section 2 Mastering Angular CLI (command-line interface)
-  4-5-6-7-
+4. What is Angular CLI 
+
+5. Installing Angular CLI
+    ```
+          In this lesson you will learn how to install Angular CLI.
+
+          - To install the Angular CLI, open a terminal window and run the following command:
+
+          - npm install -g @angular/cli
+
+          - On Windows client computers, the execution of PowerShell scripts is disabled by default. 
+          To allow the execution of PowerShell scripts, which is needed for npm global binaries, you must set the following:
+
+          Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+          - npm i -g @angular/cli@18.1 
+
+
+
+    ```
+    6. Angular CLI - Project Creation and Management
+    ```
+      - scss  
+      - no SSR  
+      > ng s --port=4201 
+      > ng s --port=4201 --open
+      > ng s --port=4201 -o
+      in pacakge.json in scripts add 
+      "start2": "ng serve --port 4201 --open",
+      >> npm run start2
+      > ng s -o 
+      >ng g c home --no-flat 
+      >ng g c home --flat 
+      >ng g c no-style --inline-style 
+      >ng g c no-style -s 
+      >ng g c css-copmonent --style=css
+      >ng g c no-style --inline-style --inline-template
+      >ng g c no-style -s -t
+      >ng g c login --prefix  // not add prefix app to component name
+      >ng g c login -p  // not add prefix app to component name
+      >ng g c login --prefix=auth // add prefix auth to component name
+    ``` 
+    7. Angular CLI command-language syntax
+
 ######  Section 3 Understanding Angular Project Structure
   8-9-
 ######  Section 4 Introduction to Angular Framework
