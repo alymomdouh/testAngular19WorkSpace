@@ -166,7 +166,11 @@ Important commands:
       >ng g c login --prefix=auth // add prefix auth to component name
     ``` 
 ######  Section 3 Understanding Angular Project Structure
-  8-9-
+ 
+8. Understanding Angular Project Structure Part 1
+
+9. Understanding Angular Project Structure Part 2
+
 ######  Section 4 Introduction to Angular Framework
   10-11-12-
 ######  Section 5 Core Features
