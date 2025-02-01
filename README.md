@@ -144,6 +144,7 @@ Important commands:
 6. Angular CLI - Project Creation and Management
 
 7. Angular CLI command-language syntax
+
  ```
       - scss  
       - no SSR  
@@ -165,8 +166,8 @@ Important commands:
       >ng g c login -p  // not add prefix app to component name
       >ng g c login --prefix=auth // add prefix auth to component name
 
-    ``` 
-    
+  ``` 
+
 ######  Section 3 Understanding Angular Project Structure
  
 8. Understanding Angular Project Structure Part 1
@@ -174,7 +175,13 @@ Important commands:
 9. Understanding Angular Project Structure Part 2
 
 ######  Section 4 Introduction to Angular Framework
-  10-11-12-
+10. Introduction To Angular - Custom HTML Elements, Model vs View (Interpolation)
+
+11. Adding Bootstrap to Your Angular App (A Step-by-Step Guide)
+```
+> npm i bootstrap
+```
+12. Why Angular Discover the Core Features of Angular
 ######  Section 5 Core Features
   13- =>>>>    26-
 ######  Section 6 Angular Built-In Pipes
