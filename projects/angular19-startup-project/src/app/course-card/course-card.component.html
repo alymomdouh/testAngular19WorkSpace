@@ -1,0 +1,30 @@
+<!-- <div class="course-card round text-center">
+  <div class="fw-bold p-2 course-title">
+    Angular For Beginners
+  </div>
+  <div>
+    <img src="https://placehold.co/600x400" alt="Angular For Beginners" class="img-fluid" />
+  </div>
+  <div class="course-description p-2 text-start">
+
+    Learn Angular from scratch and build your first Angular app with this comprehensive guide.
+    This course covers everything from setting up your development environment to building a simple Angular app.
+  </div>
+</div> -->
+<div class="course-card rounded text-center my-2">
+  <div class="fw-bold p-2 course-title">
+    {{course.description}}
+  </div>
+  <div>
+    <!-- <img [src]="course.imageUrl" alt="course_image" class="w-100" /> -->
+    <img src="projects/angular19-startup-project/src/assets/images/angular_for_beginners.png"
+      alt="Angular For Beginners" class="img-fluid" />
+  </div>
+  <div class="course-description p-2 text-start">
+    {{course.longDescription}}
+  </div>
+
+  <div class="p-2">
+    <button class="btn btn-primary" (click)="viewCourse()">View Course</button>
+  </div>
+</div>

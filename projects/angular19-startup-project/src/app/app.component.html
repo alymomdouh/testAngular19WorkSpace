@@ -331,7 +331,7 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div class="channel-name">
+<!-- <div class="channel-name">
   <div>
     <h1>Future Code</h1>
     <div class="lesson-number">
@@ -347,5 +347,30 @@
 </div>
 <button class="btn btn-primary">
   check button style
-</button>
+</button> -->
+<div class="p-2 text-light justify-content-between bg-dark">
+  <div class="ps-2">
+    <h1>Angular in Arabic - The Complete Guide</h1>
+    <ng-container>8- Sharing data between child and parent components by &#46;Output Decorator (Custom Events and Event
+      Emitters)</ng-container>
+  </div>
+</div>
+<!-- <div class="container-fluid">
+  <div class="row mt-2">
+    <div class="col-md-4 col-12">
+      <app-course-card [title]="'Angular For Beginners'" />
+      <app-course-card />
+      <app-course-card />
+    </div>
+  </div>
+</div> -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-12">
+      <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="beginnerCourse"></app-course-card>
+      <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="rxjscourse"></app-course-card>
+      <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="ngrxcourse"></app-course-card>
+    </div>
+  </div>
+</div>
 <router-outlet />

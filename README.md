@@ -183,6 +183,10 @@ Important commands:
 ```
 12. Why Angular Discover the Core Features of Angular
 ######  Section 5 Core Features
+13. Sharing data between child and parent components by @Input Decorator
+ 
+14. Sharing data between child and parent components by @Output Decorator
+
   13- =>>>>    26-
 ######  Section 6 Angular Built-In Pipes
   27-28-29-
