@@ -141,8 +141,10 @@ Important commands:
 
 
     ```
-    6. Angular CLI - Project Creation and Management
-    ```
+6. Angular CLI - Project Creation and Management
+
+7. Angular CLI command-language syntax
+ ```
       - scss  
       - no SSR  
       > ng s --port=4201 
@@ -163,8 +165,6 @@ Important commands:
       >ng g c login -p  // not add prefix app to component name
       >ng g c login --prefix=auth // add prefix auth to component name
     ``` 
-    7. Angular CLI command-language syntax
-
 ######  Section 3 Understanding Angular Project Structure
   8-9-
 ######  Section 4 Introduction to Angular Framework
