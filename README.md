@@ -210,6 +210,8 @@ Important commands:
 
 23. Angular *ngClass Core Directive - Learn All Features
 
+24. Angular *ngStyle Core Directive - When to use it and Why
+
 
   13- =>>>>    26-
 ######  Section 6 Angular Built-In Pipes

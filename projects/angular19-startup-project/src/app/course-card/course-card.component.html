@@ -19,6 +19,12 @@
         [ngClass]="(true)? 'beginner': 'advanced'"
         [class.beginner]="true"
   -->
+
+  <!--
+  [style.color]="'red'"
+  [ngStyle]="{'border': '1px solid black'}"
+  [ngStyle]="{'color': (true)? 'red': 'black'}"
+  -->
   <div class="fw-bold p-2 course-title">
     {{course.description}}
   </div>
