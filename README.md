@@ -193,6 +193,8 @@ Important commands:
 
 17. Angular 17 @for @empty, $index, $count, $even and $odd
 
+18. Understanding Angular 17 @for tracking functions
+
   13- =>>>>    26-
 ######  Section 6 Angular Built-In Pipes
   27-28-29-
