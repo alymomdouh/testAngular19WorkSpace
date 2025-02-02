@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CategoryType, ICourse } from './app.component.models';
+import { CommonModule } from '@angular/common';
 // import { NgForOf } from '@angular/common';
 
 @Component({
@@ -10,7 +11,7 @@ import { CategoryType, ICourse } from './app.component.models';
     RouterOutlet,
     CourseCardComponent,
     //NgForOf  //use with old ngFor
-
+    CommonModule // for uses all pipes and directives
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -63,4 +64,10 @@ export class AppComponent {
   trackCourse(index: number, course: ICourse): number {
     return course.id
   }
+
+  data = {
+    CourseName: 'Course Name to test pipe',
+    CourseDescription: 'Course Description Course Description Course Description Course Description v Course Description Course Description Course Description',
+  }
+  today = new Date();
 }
