@@ -219,6 +219,8 @@ Important commands:
 ######  Section 6 Angular Built-In Pipes
 27. Angular Built-In Pipes Part 1 - Transforming Data Using Pipes
 
+28. Angular Built-In Pipes Part 2 - Transforming Data Using Pipes
+
   27-28-29-
 ######  Section 7 Component Lifecycle Hook
   30-  ==>>>>>   37-
