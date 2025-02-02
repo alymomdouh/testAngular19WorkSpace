@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, input, Output } from '@angular/core';
 import { CategoryType, ICourse } from '../app.component.models';
-import { NgStyle } from '@angular/common';
+// import { NgStyle  } from '@angular/common';
+// import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 // import { NgClass, NgIf } from '@angular/common';
 
 @Component({
@@ -9,6 +10,7 @@ import { NgStyle } from '@angular/common';
     // NgIf, //use with old if
     // NgClass //use with old ngClass or can add CommonModule
     // NgStyle
+    //NgSwitch, NgSwitchCase, NgSwitchDefault// with old way for ngSwitch
   ],
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.scss'

@@ -214,8 +214,8 @@ Important commands:
 
 25. Angular @switch syntax
 
-
-  13- =>>>>    26-
+26. Angular *ngSwitch Core Directive Explained (Syntax Prior to v17)
+   
 ######  Section 6 Angular Built-In Pipes
   27-28-29-
 ######  Section 7 Component Lifecycle Hook

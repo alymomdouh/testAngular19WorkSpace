@@ -42,7 +42,7 @@
   <div class="course-description p-2 text-start">
     {{course.longDescription}}
   </div>
-  <!-- <span class="badge bg-warning">Beginners</span> -->
+  <!-- new way for switch -->
   @switch(course.category){
   @case(CategoryType.beginners){
   <span class="badge bg-warning">Beginners</span>
@@ -59,6 +59,15 @@
   @default {
   <span class="badge bg-danger">other Data</span>}
   }
+
+  <!-- old way for switch -->
+  <!-- <div [ngSwitch]="course.category">
+    <span *ngSwitchCase="CategoryType.beginners" class="badge bg-warning">Beginners</span>
+    <span *ngSwitchCase="CategoryType.intermediate" class="badge bg-info">intermediate</span>
+    <span *ngSwitchCase="CategoryType.advanced" class="badge bg-success">advanced</span>
+    <span *ngSwitchCase="CategoryType.other" class="badge bg-light">other</span>
+    <span *ngSwitchDefault class="badge bg-danger">other Data</span>
+  </div> -->
   <div class="p-2">
     <button class="btn btn-primary" (click)="viewCourse()">View Course</button>
   </div>
