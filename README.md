@@ -207,6 +207,10 @@ Important commands:
 21. Angular @if else syntax
 
 22. Angular *ngIf Directive and the Elvis Operator
+
+23. Angular *ngClass Core Directive - Learn All Features
+
+
   13- =>>>>    26-
 ######  Section 6 Angular Built-In Pipes
   27-28-29-

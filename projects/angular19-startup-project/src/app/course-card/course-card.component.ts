@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Input, input, Output } from '@angular/core';
 import { ICourse } from '../app.component.models';
-import { NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-course-card',
   imports: [
-    NgIf //use with old if
+    NgIf, //use with old if
+    NgClass //use with old ngClass or can add CommonModule
   ],
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.scss'

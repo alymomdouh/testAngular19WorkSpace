@@ -12,6 +12,13 @@
   </div>
 </div> -->
 <div class="course-card rounded text-center my-2">
+  <!--  [ngClass]="'beginner'"
+        [ngClass]="'beginner course-card'"
+        [ngClass]="['beginner', 'course-card']"
+        [ngClass]="{'beginner':true, 'course-card':true}"
+        [ngClass]="(true)? 'beginner': 'advanced'"
+        [class.beginner]="true"
+  -->
   <div class="fw-bold p-2 course-title">
     {{course.description}}
   </div>
@@ -22,10 +29,10 @@
     class="img-fluid" /> -->
   <h1>Image not found</h1>
   }
-
-  <div *ngIf="course.imageUrl; else noImageFound">
+  <!-- old way for if -->
+  <!-- <div *ngIf="course.imageUrl; else noImageFound">
     <img [src]="course.imageUrl" alt="course" class="w-100" />
-  </div>
+  </div> -->
   <div class="course-description p-2 text-start">
     {{course.longDescription}}
   </div>
@@ -34,6 +41,6 @@
     <button class="btn btn-primary" (click)="viewCourse()">View Course</button>
   </div>
 </div>
-<ng-template #noImageFound>
+<!-- <ng-template #noImageFound>
   <h1>Image not found</h1>
-</ng-template>
+</ng-template> -->
