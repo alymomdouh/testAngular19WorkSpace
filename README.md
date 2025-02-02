@@ -187,6 +187,10 @@ Important commands:
  
 14. Sharing data between child and parent components by @Output Decorator
 
+15. Self-closing tags in Angular 16 and later versions
+
+16. Built-in Structural directives - Angular 17 Control Flow Syntax (for Syntax)
+
   13- =>>>>    26-
 ######  Section 6 Angular Built-In Pipes
   27-28-29-

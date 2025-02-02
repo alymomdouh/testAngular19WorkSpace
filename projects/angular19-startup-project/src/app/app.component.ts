@@ -2,10 +2,15 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CategoryType, ICourse } from './app.component.models';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CourseCardComponent],
+  imports: [
+    RouterOutlet,
+    CourseCardComponent,
+    NgFor
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

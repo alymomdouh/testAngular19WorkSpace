@@ -366,11 +366,17 @@
 </div> -->
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-4 col-12">
+    <!-- <div class="col-md-4 col-12">
       <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="beginnerCourse"></app-course-card>
       <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="rxjscourse"></app-course-card>
       <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="ngrxcourse"></app-course-card>
-    </div>
+    </div> -->
+    <ng-container *ngFor="let course of courses">
+      <div class="col-md-4 col-12">
+        <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="course"></app-course-card>
+      </div>
+    </ng-container>
+
   </div>
 </div>
 <router-outlet />
