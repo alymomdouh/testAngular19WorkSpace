@@ -11,6 +11,7 @@ export class CourseCardComponent {
 
   // @Input() title!: string;
   @Input({ required: true }) course: ICourse = {} as ICourse;
+  //@Input({ required: true }) index!: number;
   @Output() viewCourseEvent = new EventEmitter<ICourse>();
 
   viewCourse(): void {
