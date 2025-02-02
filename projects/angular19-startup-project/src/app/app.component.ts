@@ -10,6 +10,7 @@ import { CategoryType, ICourse } from './app.component.models';
     RouterOutlet,
     CourseCardComponent,
     //NgForOf  //use with old ngFor
+
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

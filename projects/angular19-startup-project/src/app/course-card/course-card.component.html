@@ -15,10 +15,16 @@
   <div class="fw-bold p-2 course-title">
     {{course.description}}
   </div>
-  <div>
-    <!-- <img [src]="course.imageUrl" alt="course_image" class="w-100" /> -->
-    <img src="projects/angular19-startup-project/src/assets/images/angular_for_beginners.png"
-      alt="Angular For Beginners" class="img-fluid" />
+  @if(course.imageUrl){
+  <img [src]="course.imageUrl" alt="course" class="w-100" />
+  }@else {
+  <!-- <img src="projects/angular19-startup-project/src/assets/images/angular_for_beginners.png" alt="Angular For Beginners"
+    class="img-fluid" /> -->
+  <h1>Image not found</h1>
+  }
+
+  <div *ngIf="course.imageUrl; else noImageFound">
+    <img [src]="course.imageUrl" alt="course" class="w-100" />
   </div>
   <div class="course-description p-2 text-start">
     {{course.longDescription}}
@@ -28,3 +34,6 @@
     <button class="btn btn-primary" (click)="viewCourse()">View Course</button>
   </div>
 </div>
+<ng-template #noImageFound>
+  <h1>Image not found</h1>
+</ng-template>

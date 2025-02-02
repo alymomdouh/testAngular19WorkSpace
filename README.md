@@ -204,7 +204,9 @@ Important commands:
 -- then select project path 
 --select y or n 
 ```
+21. Angular @if else syntax
 
+22. Angular *ngIf Directive and the Elvis Operator
   13- =>>>>    26-
 ######  Section 6 Angular Built-In Pipes
   27-28-29-
