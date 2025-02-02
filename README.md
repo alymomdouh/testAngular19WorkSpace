@@ -197,6 +197,13 @@ Important commands:
 
 19. Angular *ngFor Core Directive (Syntax before Angular 17)
 
+20. How to migrate to Angular 17's Updated Control Flow Syntax
+
+```
+>ng g @angular/core:control-flow
+-- then select project path 
+--select y or n 
+```
 
   13- =>>>>    26-
 ######  Section 6 Angular Built-In Pipes
