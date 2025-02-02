@@ -371,12 +371,18 @@
       <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="rxjscourse"></app-course-card>
       <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="ngrxcourse"></app-course-card>
     </div> -->
+    <!-- old ngFor -->
     <ng-container *ngFor="let course of courses">
       <div class="col-md-4 col-12">
         <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="course"></app-course-card>
       </div>
     </ng-container>
-
+    <!-- new ngFor -->
+    @for (course of courses; track course.id) {
+    <div class="col-md-4 col-12">
+      <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="course"></app-course-card>
+    </div>
+    }
   </div>
 </div>
 <router-outlet />
