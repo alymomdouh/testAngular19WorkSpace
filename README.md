@@ -212,6 +212,8 @@ Important commands:
 
 24. Angular *ngStyle Core Directive - When to use it and Why
 
+25. Angular @switch syntax
+
 
   13- =>>>>    26-
 ######  Section 6 Angular Built-In Pipes

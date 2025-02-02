@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, input, Output } from '@angular/core';
-import { ICourse } from '../app.component.models';
+import { CategoryType, ICourse } from '../app.component.models';
 import { NgStyle } from '@angular/common';
 // import { NgClass, NgIf } from '@angular/common';
 
@@ -8,7 +8,7 @@ import { NgStyle } from '@angular/common';
   imports: [
     // NgIf, //use with old if
     // NgClass //use with old ngClass or can add CommonModule
-    NgStyle
+    // NgStyle
   ],
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.scss'
@@ -23,4 +23,8 @@ export class CourseCardComponent {
   viewCourse(): void {
     this.viewCourseEvent.emit(this.course);
   }
+
+  // to view or access enum in html element
+  //get CategoryType() { return CategoryType }
+  CategoryType = CategoryType
 }
