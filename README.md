@@ -195,6 +195,9 @@ Important commands:
 
 18. Understanding Angular 17 @for tracking functions
 
+19. Angular *ngFor Core Directive (Syntax before Angular 17)
+
+
   13- =>>>>    26-
 ######  Section 6 Angular Built-In Pipes
   27-28-29-

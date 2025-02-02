@@ -372,7 +372,7 @@
       <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="ngrxcourse"></app-course-card>
     </div> -->
     <!-- old ngFor -->
-    <!-- <ng-container *ngFor="let course of courses">
+    <!-- <ng-container *ngFor="let course of courses ;index as i; first as f; last as l; even as e; odd as o">
       <div class="col-md-4 col-12">
         <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="course"></app-course-card>
       </div>
