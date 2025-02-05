@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CategoryType, ICourse } from './app.component.models';
 import { CommonModule } from '@angular/common';
+import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
 // import { NgForOf } from '@angular/common';
 
 @Component({
@@ -10,6 +11,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     RouterOutlet,
     CourseCardComponent,
+    AsyncPipeComponent,
     //NgForOf  //use with old ngFor
     CommonModule // for uses all pipes and directives
   ],
@@ -23,6 +25,8 @@ export class AppComponent {
   readonly courses: Array<ICourse> = [
     {
       id: 1,
+      sequenceNumber: 1,
+      name: 'Angular 17 for beginners',
       description: 'Angular 17 for beginners',
       // imageUrl: 'assets/images/angular_for_beginners.png',
       imageUrl: 'assets/images/angular_for_beginners.png',
@@ -34,6 +38,8 @@ export class AppComponent {
     },
     {
       id: 2,
+      sequenceNumber: 2,
+      name: 'RxJs',
       description: 'RxJs',
       imageUrl: 'assets/images/rxjs.PNG',
       lessonsCount: 40,
@@ -44,6 +50,8 @@ export class AppComponent {
     },
     {
       id: 3,
+      sequenceNumber: 3,
+      name: 'NgRx',
       description: 'NgRx',
       imageUrl: 'assets/images/ngrx.PNG',
       lessonsCount: 48,

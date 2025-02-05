@@ -25,8 +25,11 @@
   [ngStyle]="{'border': '1px solid black'}"
   [ngStyle]="{'color': (true)? 'red': 'black'}"
   -->
-  <div class="fw-bold p-2 course-title">
+  <!-- <div class="fw-bold p-2 course-title">
     {{course.description}}
+  </div> -->
+  <div class="fw-bold p-2 course-title">
+    {{course.name}}
   </div>
   @if(course.imageUrl){
   <img [src]="course.imageUrl" alt="course" class="w-100" />

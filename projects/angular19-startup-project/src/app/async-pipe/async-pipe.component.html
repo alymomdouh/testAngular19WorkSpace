@@ -1,0 +1,31 @@
+syncPipe 🚀
+@for(course of courses; track course.id) {
+} @empty {
+No Courses Found!
+}
+Using Async Pipe
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- @for(course of courses; track course.id) { -->
+    <!-- @for(course of courses$ |async; track course.id) {
+    <div class="col-2">
+      <app-course-card [course]="course"></app-course-card>
+    </div>
+    } @empty {
+    No Courses Found!
+    } -->
+    <!-- other way to use async pipe -->
+    <ng-container *ngIf="courses$ | async as newcoursesListName">
+      @for(course of newcoursesListName; track course.id) {
+      <div class="col-2">
+        <app-course-card [course]="course"></app-course-card>
+      </div>
+      } @empty {
+      No Courses Found!
+      }
+    </ng-container>
+  </div>
+</div>
+<!-- this way not work with me not know the reason -->
+<!-- <ng-container *ngIf="courseService.getCourses() | async as newcoursesListName"> -->
