@@ -233,6 +233,10 @@ Important commands:
 
 34. Component Lifecycle Hook -5 AfterContentChecked
 
+35. Component Lifecycle Hook -6 AfterViewInit
+
+36. Component Lifecycle Hook -7 AfterViewChecked
+
   30-  ==>>>>>   37-
 ######  Section 8 Angular Routing  (9)
   38-   46-

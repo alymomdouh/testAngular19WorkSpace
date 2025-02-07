@@ -1,6 +1,7 @@
-import { AfterContentChecked, AfterContentInit, Component, DoCheck, EventEmitter, Input, input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, EventEmitter, Input, input, OnChanges, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { CategoryType, ICourse } from '../app.component.models';
-import { json } from 'stream/consumers';
+import { CommonModule } from '@angular/common';
+import { ChildViewComponent } from '../child-view/child-view.component';
 // import { NgStyle  } from '@angular/common';
 // import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 // import { NgClass, NgIf } from '@angular/common';
@@ -8,6 +9,8 @@ import { json } from 'stream/consumers';
 @Component({
   selector: 'app-course-card',
   imports: [
+    CommonModule,
+    ChildViewComponent
     // NgIf, //use with old if
     // NgClass //use with old ngClass or can add CommonModule
     // NgStyle
@@ -16,9 +19,9 @@ import { json } from 'stream/consumers';
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.scss'
 })
-export class CourseCardComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked {
-
-
+export class CourseCardComponent implements OnChanges, OnInit, DoCheck,
+  AfterContentInit, AfterContentChecked,
+  AfterViewInit, AfterViewChecked {
   /**
      * Responds when Angular sets or resets data-bound input properties.
      * not in ouput and when call from outside not from inside
@@ -68,9 +71,36 @@ export class CourseCardComponent implements OnChanges, OnInit, DoCheck, AfterCon
     console.log(`%c ngAfterContentInit.on CourseCardComponent :in course Id ${this.course.id}`, 'color:yellow');
   }
 
+  /**
+   * Lifecycle hook that is called after the default change detector has completed checking all of the component's content.
+   * This method is called after ngAfterContentInit and every subsequent ngDoCheck.
+   * It is invoked each time the content of the component has been checked.
+   */
   ngAfterContentChecked(): void {
     console.log(`%c ngAfterContentChecked on CourseCardComponent :in course Id ${this.course.id}`, 'color:blue');
   }
+  @ViewChild(ChildViewComponent) childView!: ChildViewComponent;
+  /**
+   * Lifecycle hook that is called after a component's view and all sub childern component has been fully initialized.
+   * This method is invoked only once when the view is initialized.
+   * It is a good place to perform any additional initialization tasks that require the view to be fully rendered.
+   *
+   * In this implementation, it logs a message to the console with the title of the child view.
+   */
+  ngAfterViewInit(): void {
+    console.log(`%c ngAfterViewInit.on CourseCardComponent :in childView title ${this.childView?.ChildTitle}`, 'color:yellow');
+  }
+
+  /**
+   * Lifecycle hook that is called after the component's view has been checked by the Angular change detection mechanism.
+   * This method is invoked after Angular has finished checking the component's view and its child views.
+   * It is a good place to perform any post-checking operations or to log information about the view state.
+   * IT Called one time after ngAfterViewInit   then every time after ngAfterContentChecked
+   */
+  ngAfterViewChecked(): void {
+    console.log(`%c ngAfterViewInit.on CourseCardComponent :in childView title ${this.childView?.ChildTitle}`, 'color:brown');
+  }
+
   // @Input() title!: string;
   @Input({ required: true }) course: ICourse = {} as ICourse;
   @Input({ required: true }) index!: number;
