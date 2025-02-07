@@ -237,7 +237,7 @@ Important commands:
 
 36. Component Lifecycle Hook -7 AfterViewChecked
 
-  30-  ==>>>>>   37-
+37. Component Lifecycle Hook - OnDestroy
 ######  Section 8 Angular Routing  (9)
   38-   46-
 ######  Section 9 Angular Dependency Injection (DI)   (1)
