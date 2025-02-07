@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CourseCardComponent } from '../course-card/course-card.component';
 import { FirestoreService } from '../shared/services/firestore.service';
 import { Firestore, collection, getDocs } from 'firebase/firestore';
-import { courses, ICourse } from '../app.component.models';
+import { coursesData, ICourse } from '../app.component.models';
 
 @Component({
   selector: 'app-course-list',
@@ -16,7 +16,7 @@ import { courses, ICourse } from '../app.component.models';
 })
 export class CourseListComponent implements OnInit {
 
-  readonly courses: Array<ICourse> = courses;
+  courses: Array<ICourse> = coursesData;
   //firestore = inject(Firestore);
   constructor(private firestoreService: FirestoreService) { }
 
@@ -24,8 +24,9 @@ export class CourseListComponent implements OnInit {
     // getDocs(collection(this.firestore, 'courses')).then((response) => {
     //   console.log(response.docs)
     // });
-    this.firestoreService.getAll('courses').subscribe(res => {
-      console.log('res', res);
-    });
+    // this.firestoreService.getAll('courses').subscribe(res => {
+    //   console.log('res', res);
+    // });
+    this.courses = coursesData
   }
 }

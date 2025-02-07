@@ -16,7 +16,7 @@ export enum CategoryType {
   advanced = 3,
   other
 }
-export const courses: Array<ICourse> = [
+export const coursesData: Array<ICourse> = [
   {
     id: 1,
     description: 'Angular 17 for beginners',

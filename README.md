@@ -92,7 +92,7 @@ Important commands:
 ###   -[link in youtube](https://www.youtube.com/playlist?list=PLgU7izgeR2lwwNRNY4fYQf3GZawV-EGnW)
   
 ###   -[link in Udemy](https://www.udemy.com/course/angular-17-the-complete-guide-2024/)
-######  Section 1  Getting Start to the Angular
+######  Section 1  Getting Start to the Angular  (3)
    1. Introduction to the Angular
    ```
         - Angular io: https://angular.io/
@@ -120,7 +120,7 @@ Important commands:
 
   ```
 
-######  Section 2 Mastering Angular CLI (command-line interface)
+######  Section 2 Mastering Angular CLI (command-line interface)  (4)
 4. What is Angular CLI 
 
 5. Installing Angular CLI
@@ -168,13 +168,13 @@ Important commands:
 
   ``` 
 
-######  Section 3 Understanding Angular Project Structure
+######  Section 3 Understanding Angular Project Structure   (2)
  
 8. Understanding Angular Project Structure Part 1
 
 9. Understanding Angular Project Structure Part 2
 
-######  Section 4 Introduction to Angular Framework
+######  Section 4 Introduction to Angular Framework   (3)
 10. Introduction To Angular - Custom HTML Elements, Model vs View (Interpolation)
 
 11. Adding Bootstrap to Your Angular App (A Step-by-Step Guide)
@@ -182,7 +182,7 @@ Important commands:
 > npm i bootstrap
 ```
 12. Why Angular Discover the Core Features of Angular
-######  Section 5 Core Features
+######  Section 5 Core Features    (14)
 13. Sharing data between child and parent components by @Input Decorator
  
 14. Sharing data between child and parent components by @Output Decorator
@@ -216,13 +216,13 @@ Important commands:
 
 26. Angular *ngSwitch Core Directive Explained (Syntax Prior to v17)
    
-######  Section 6 Angular Built-In Pipes
+######  Section 6 Angular Built-In Pipes   (3)
 27. Angular Built-In Pipes Part 1 - Transforming Data Using Pipes
 
 28. Angular Built-In Pipes Part 2 - Transforming Data Using Pipes
  
 29. Understanding AsyncPipe
-######  Section 7 Component Lifecycle Hook
+######  Section 7 Component Lifecycle Hook   (8)
 30. Component Lifecycle Hook -1 ngOnChanges
 
 31. Component Lifecycle Hook -2 OnInit
@@ -239,6 +239,20 @@ Important commands:
 
 37. Component Lifecycle Hook - OnDestroy
 ######  Section 8 Angular Routing  (9)
+ 
+38. Angular Routing - Essential Concepts
+
+39. Control navigation with UI elements
+
+40. Angular Routing - Implementing Redirect & Wildcard notation (404) Pages
+
+41. Angular Routing Parameters - Required Parameters
+
+```
+> npm i @angular/fire
+>npm i firebase
+
+```
   38-   46-
 ######  Section 9 Angular Dependency Injection (DI)   (1)
   47- 
