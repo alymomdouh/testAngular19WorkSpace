@@ -1,0 +1,53 @@
+.channel-name {
+    background-color: #000;
+}
+
+li {
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.nav-link-inner {
+    border-radius: 4px;
+    font-size: 1rem;
+    // font-size: clamp(10px, 1.6rem, 20px);
+    padding: 8px;
+    // padding: 8px clamp(5px, 0.7vw, 16px);
+}
+
+@mixin activeLink() {
+    border-radius: 2px;
+    box-shadow: inset 0 1px 0 0 #c2c2c2;
+    background: #bddbfa linear-gradient(to bottom, #686969 5%, #2f5378 100%);
+    color: #ffffff;
+    text-shadow: 0 1px 0 #000000;
+    box-sizing: border-box;
+}
+
+.active {
+   @include activeLink();
+}
+
+.nav-link:hover {
+    @include activeLink();
+}
+
+.header {
+    background-color: #000;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    right: 0;
+    left: 0;
+    padding: 0.5rem;
+    z-index: 2;
+}

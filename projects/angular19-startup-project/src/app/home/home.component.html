@@ -1,0 +1,29 @@
+<div class="row mx-0 bg-black">
+    <div class="col-12 px-0 text-center">
+        <div class="p-4">
+            <i class="fa-brands fa-angular angular-icon"></i>
+        </div>
+        <div class="p-3">
+            <h1 class="text-light">
+                Coding from A to Z
+            </h1>
+        </div>
+        <h3 class="text-light">
+            Stay Updated with the Angular Ecosystem
+        </h3>
+    </div>
+    <div class="col-12 p-4 text-warning text-center">
+        <h2>Upcoming Courses!</h2>
+    </div>
+    @for (course of courses; track course.value) {
+        <div class="col-2">
+            <div class="course text-light p-3 m-3 text-center rounded d-flex align-items-center
+                justify-content-center">
+                <div class="d-flex flex-column">
+                    <div><i [class]="course.key"></i></div>
+                    <div>{{course.value}}</div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
