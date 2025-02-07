@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, DoCheck, EventEmitter, Input, input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, Component, DoCheck, EventEmitter, Input, input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { CategoryType, ICourse } from '../app.component.models';
 import { json } from 'stream/consumers';
 // import { NgStyle  } from '@angular/common';
@@ -16,7 +16,8 @@ import { json } from 'stream/consumers';
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.scss'
 })
-export class CourseCardComponent implements OnChanges, OnInit, DoCheck, AfterContentInit {
+export class CourseCardComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked {
+
 
   /**
      * Responds when Angular sets or resets data-bound input properties.
@@ -65,6 +66,10 @@ export class CourseCardComponent implements OnChanges, OnInit, DoCheck, AfterCon
    */
   ngAfterContentInit(): void {
     console.log(`%c ngAfterContentInit.on CourseCardComponent :in course Id ${this.course.id}`, 'color:yellow');
+  }
+
+  ngAfterContentChecked(): void {
+    console.log(`%c ngAfterContentChecked on CourseCardComponent :in course Id ${this.course.id}`, 'color:blue');
   }
   // @Input() title!: string;
   @Input({ required: true }) course: ICourse = {} as ICourse;
