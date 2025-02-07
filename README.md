@@ -223,10 +223,11 @@ Important commands:
  
 29. Understanding AsyncPipe
 ######  Section 7 Component Lifecycle Hook
-30. Component Lifecycle Hook - ngOnChanges
+30. Component Lifecycle Hook -1 ngOnChanges
 
-31. Component Lifecycle Hook - OnInit
+31. Component Lifecycle Hook -2 OnInit
 
+32. Component Lifecycle Hook -3 DoCheck
 
   30-  ==>>>>>   37-
 ######  Section 8 Angular Routing  (9)

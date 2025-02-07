@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, DoCheck, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CategoryType, ICourse } from './app.component.models';
@@ -20,15 +20,20 @@ import { timer } from 'rxjs';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnChanges, OnInit {
-  ngOnInit(): void {
-    console.log('ngOnInit on AppComponent : ');
-    timer(3000).subscribe(() => this.data.CourseName = 'Angular 17 for beginners');
-    timer(8000).subscribe(() => this.title = 'Update Angular 17 Course Title');
-  }
+
   ngOnChanges(changes: SimpleChanges): void {
     console.log('changes on AppComponent : ', changes);
     // will not call this function and not print anything
   }
+
+  ngOnInit(): void {
+    console.log('ngOnInit on AppComponent : ');
+    ///  timer(3000).subscribe(() => this.data.CourseName = 'Angular 17 for beginners');
+    timer(3000).subscribe(() => this.courses.map(c => c.name = c.name + " Update"));
+    //timer(8000).subscribe(() => this.title = 'Update Angular 17 Course Title');
+  }
+
+
   title = 'angular19StartupProject';
 
 
