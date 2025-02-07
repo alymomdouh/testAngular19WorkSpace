@@ -98,7 +98,7 @@ export class CourseCardComponent implements OnChanges, OnInit, DoCheck,
    * IT Called one time after ngAfterViewInit   then every time after ngAfterContentChecked
    */
   ngAfterViewChecked(): void {
-    console.log(`%c ngAfterViewInit.on CourseCardComponent :in childView title ${this.childView?.ChildTitle}`, 'color:brown');
+    console.log(`%c ngAfterViewChecked.on CourseCardComponent :in childView title ${this.childView?.ChildTitle}`, 'color:brown');
   }
 
   // @Input() title!: string;
