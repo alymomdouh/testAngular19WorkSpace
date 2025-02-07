@@ -27,7 +27,7 @@ export class AppComponent implements OnChanges, OnInit {
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit on AppComponent : ');
+    console.log(`%c ngOnInit .on AppComponent`, 'color:purple');
     ///  timer(3000).subscribe(() => this.data.CourseName = 'Angular 17 for beginners');
     timer(3000).subscribe(() => this.courses.map(c => c.name = c.name + " Update"));
     //timer(8000).subscribe(() => this.title = 'Update Angular 17 Course Title');

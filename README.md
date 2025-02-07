@@ -229,6 +229,8 @@ Important commands:
 
 32. Component Lifecycle Hook -3 DoCheck
 
+33. Component Lifecycle Hook -4 AfterContentInit
+
   30-  ==>>>>>   37-
 ######  Section 8 Angular Routing  (9)
   38-   46-

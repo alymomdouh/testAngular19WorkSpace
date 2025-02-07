@@ -1,5 +1,6 @@
-import { Component, DoCheck, EventEmitter, Input, input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { AfterContentInit, Component, DoCheck, EventEmitter, Input, input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { CategoryType, ICourse } from '../app.component.models';
+import { json } from 'stream/consumers';
 // import { NgStyle  } from '@angular/common';
 // import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 // import { NgClass, NgIf } from '@angular/common';
@@ -15,7 +16,7 @@ import { CategoryType, ICourse } from '../app.component.models';
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.scss'
 })
-export class CourseCardComponent implements OnChanges, OnInit, DoCheck {
+export class CourseCardComponent implements OnChanges, OnInit, DoCheck, AfterContentInit {
 
   /**
      * Responds when Angular sets or resets data-bound input properties.
@@ -35,7 +36,7 @@ export class CourseCardComponent implements OnChanges, OnInit, DoCheck {
    * Initialize the component and log the course ID to the console.
    */
   ngOnInit(): void {
-    console.log('ngOnInit on CourseCardComponent : ', this.course.id);
+    console.log(`%c ngOnInit .on CourseCardComponent :in course Id ${this.course.id}`, 'color:red');
   }
   /**
    * A lifecycle hook that is called during every change detection run.
@@ -48,10 +49,23 @@ export class CourseCardComponent implements OnChanges, OnInit, DoCheck {
    * @example
    */
   ngDoCheck(): void {
-    console.log('ngDoCheck on CourseCardComponent :in course Id ', this.course.id);
+    console.log(`%c ngDoCheck.on CourseCardComponent :in course Id ${this.course.id}`, 'color:green');
   }
 
-
+  /**
+   * Lifecycle hook that is called after Angular has fully initialized
+   * all content of the component's view.
+   *
+   * This method is called once after the first `ngAfterContentChecked`.
+   *
+   * Use this hook to perform any additional initialization tasks that
+   * require the content to be fully initialized.
+   *
+   * In this implementation, it logs the course ID to the console.
+   */
+  ngAfterContentInit(): void {
+    console.log(`%c ngAfterContentInit.on CourseCardComponent :in course Id ${this.course.id}`, 'color:yellow');
+  }
   // @Input() title!: string;
   @Input({ required: true }) course: ICourse = {} as ICourse;
   @Input({ required: true }) index!: number;
