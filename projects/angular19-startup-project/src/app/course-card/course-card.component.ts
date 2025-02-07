@@ -2,6 +2,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 import { CategoryType, ICourse } from '../app.component.models';
 import { CommonModule } from '@angular/common';
 import { ChildViewComponent } from '../child-view/child-view.component';
+import { Router } from '@angular/router';
 // import { NgStyle  } from '@angular/common';
 // import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 // import { NgClass, NgIf } from '@angular/common';
@@ -108,16 +109,23 @@ export class CourseCardComponent implements OnChanges, OnInit, DoCheck,
   ngOnDestroy(): void {
     console.log(`%c ngOnDestroy.on CourseCardComponent`, 'color:pink');
   }
+
+  constructor(private router: Router) {
+
+  }
   // @Input() title!: string;
   @Input({ required: true }) course: ICourse = {} as ICourse;
   @Input({ required: true }) index!: number;
   @Output() viewCourseEvent = new EventEmitter<ICourse>();
   name = "viewCourse";
   viewCourse(): void {
-    this.viewCourseEvent.emit(this.course);
-    console.log('viewCourse clicked! for output component');
-    this.index = 100;
-    this.name = "update name"
+    // this.viewCourseEvent.emit(this.course);
+    // console.log('viewCourse clicked! for output component');
+    // this.index = 100;
+    // this.name = "update name"
+
+    // this.router.navigateByUrl(`course-details/${this.course.id}`);
+    this.router.navigate([`course-details/${this.course.id}`]);
   }
 
   // to view or access enum in html element
