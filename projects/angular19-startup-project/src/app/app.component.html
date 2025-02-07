@@ -428,7 +428,7 @@
     let odd=$odd) {
     <div class="col-md-4 col-12">
       <!-- <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="course"  [index]="$index"></app-course-card> -->
-      <app-course-card [class.first-course]="first" [class.last-course]="last" [class.even-course]="even"
+      <app-course-card [class.first-course]="first" [class.last-course]="last" [class.even-course]="even" [index]="$index"
         [class.odd-course]="odd" (viewCourseEvent)="onCourseClicked($event)" [course]="course"></app-course-card>
     </div>
     }@empty {
@@ -442,5 +442,5 @@
 
   </div>
 </div>
-<app-async-pipe></app-async-pipe>
+<!-- <app-async-pipe></app-async-pipe> -->
 <router-outlet />

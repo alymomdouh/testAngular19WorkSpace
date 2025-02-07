@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CategoryType, ICourse } from './app.component.models';
 import { CommonModule } from '@angular/common';
-import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
+//import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
 // import { NgForOf } from '@angular/common';
 
 @Component({
@@ -11,14 +11,18 @@ import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
   imports: [
     RouterOutlet,
     CourseCardComponent,
-    AsyncPipeComponent,
+    //AsyncPipeComponent,
     //NgForOf  //use with old ngFor
     CommonModule // for uses all pipes and directives
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnChanges {
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('changes on AppComponent : ', changes);
+    // will not call this function and not print anything
+  }
   title = 'angular19StartupProject';
 
 
