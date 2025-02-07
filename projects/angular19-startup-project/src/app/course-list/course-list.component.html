@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="row">
+    @for (course of courses; track course.id) {
+    <div class="col-md-3 col-12">
+      <app-course-card [course]="course" [index]="$index" />
+    </div>
+    } @empty {
+    <h1>No Courses Found!</h1>
+    }
+  </div>
+</div>
