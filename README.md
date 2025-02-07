@@ -225,6 +225,9 @@ Important commands:
 ######  Section 7 Component Lifecycle Hook
 30. Component Lifecycle Hook - ngOnChanges
 
+31. Component Lifecycle Hook - OnInit
+
+
   30-  ==>>>>>   37-
 ######  Section 8 Angular Routing  (9)
   38-   46-

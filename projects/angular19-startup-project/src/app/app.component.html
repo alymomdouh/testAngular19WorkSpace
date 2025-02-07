@@ -391,8 +391,9 @@
     <!-- <h1>{{data|json}}</h1> -->
 
     <h1>Angular in Arabic - The Complete Guide</h1>
-    <ng-container>8- Sharing data between child and parent components by &#46;Output Decorator (Custom Events and Event
-      Emitters)</ng-container>
+    <!-- <ng-container>8- Sharing data between child and parent components by &#46;Output Decorator (Custom Events and Event
+      Emitters)</ng-container> -->
+    <div>{{title}}</div>
   </div>
 </div>
 <!-- <div class="container-fluid">
@@ -428,8 +429,9 @@
     let odd=$odd) {
     <div class="col-md-4 col-12">
       <!-- <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="course"  [index]="$index"></app-course-card> -->
-      <app-course-card [class.first-course]="first" [class.last-course]="last" [class.even-course]="even" [index]="$index"
-        [class.odd-course]="odd" (viewCourseEvent)="onCourseClicked($event)" [course]="course"></app-course-card>
+      <app-course-card [class.first-course]="first" [class.last-course]="last" [class.even-course]="even"
+        [index]="$index" [class.odd-course]="odd" (viewCourseEvent)="onCourseClicked($event)"
+        [course]="course"></app-course-card>
     </div>
     }@empty {
     <h1>No courses Found</h1>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { CategoryType, ICourse } from '../app.component.models';
 // import { NgStyle  } from '@angular/common';
 // import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
@@ -15,10 +15,12 @@ import { CategoryType, ICourse } from '../app.component.models';
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.scss'
 })
-export class CourseCardComponent implements OnChanges {
+export class CourseCardComponent implements OnChanges,OnInit {
+  ngOnInit(): void {
+    console.log('ngOnInit on CourseCardComponent : ', this.course.id);
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
-
     console.log('changes on CourseCardComponent : ', changes);
     // log results   // will call one time when component first open
     // course: SimpleChange {previousValue: undefined, currentValue: {…}, firstChange: true}
