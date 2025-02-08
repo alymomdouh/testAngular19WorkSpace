@@ -18,6 +18,10 @@ export const routes: Routes = [
     component: CourseDetailsComponent
   },
   {
+    path: 'course',
+    component: CourseDetailsComponent
+  },
+  {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'

@@ -21,10 +21,10 @@ export class CourseDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     // static ways
-    const id = this.activatedRoute.snapshot.params['id'];
-    console.log('snapshot.params', id);
-    const courseId = this.activatedRoute.snapshot.paramMap.get('id');
-    console.log('snapshot.paramMap', courseId);
+    // const id = this.activatedRoute.snapshot.params['id'];
+    // console.log('snapshot.params', id);
+    // const courseId = this.activatedRoute.snapshot.paramMap.get('id');
+    // console.log('snapshot.paramMap', courseId);
     //withComponentInputBinding
     if (this.id) {
       this.course = this.getCourse(+this.id);
@@ -34,11 +34,11 @@ export class CourseDetailsComponent implements OnInit {
     //   console.log('params', res['id'], typeof (res['id']));
     // });
 
-    this.activatedRoute.paramMap.subscribe((res: ParamMap) => {
-      console.log('paramMap', res.get('id'));
-      const courseId = Number(res.get('id'));
-      this.course = this.getCourse(courseId);
-    });
+    // this.activatedRoute.paramMap.subscribe((res: ParamMap) => {
+    //   console.log('paramMap', res.get('id'));
+    //   const courseId = Number(res.get('id'));
+    //   this.course = this.getCourse(courseId);
+    // });
 
   }
 

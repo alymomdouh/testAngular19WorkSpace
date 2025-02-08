@@ -125,7 +125,8 @@ export class CourseCardComponent implements OnChanges, OnInit, DoCheck,
     // this.name = "update name"
 
     // this.router.navigateByUrl(`course-details/${this.course.id}`);
-    this.router.navigate([`course-details/${this.course.id}`]);
+    //this.router.navigate([`course-details/${this.course.id}`]);
+    this.router.navigate([`course`], { queryParams: { id: this.course.id } });
   }
 
   // to view or access enum in html element

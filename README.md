@@ -252,6 +252,8 @@ Important commands:
 
 43. How to Use @Input() to Read Angular Route Parameters - New Feature from v16
 
+44. How to Use Angular Query Parameters - Part 1
+
 ```
 > npm i @angular/fire
 >npm i firebase
