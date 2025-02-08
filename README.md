@@ -248,6 +248,8 @@ Important commands:
 
 41. Angular Routing Parameters - Required Parameters
 
+42. Accessing Angular Route Params - All Access Methods
+
 ```
 > npm i @angular/fire
 >npm i firebase

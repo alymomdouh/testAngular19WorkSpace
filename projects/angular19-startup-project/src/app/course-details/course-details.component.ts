@@ -19,11 +19,12 @@ export class CourseDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // static ways
     const id = this.activatedRoute.snapshot.params['id'];
     console.log('snapshot.params', id);
     const courseId = this.activatedRoute.snapshot.paramMap.get('id');
     console.log('snapshot.paramMap', courseId);
-
+    // dynamic ways it lessons to any changes
     this.activatedRoute.params.subscribe((res: Params) => {
       console.log('params', res['id'], typeof (res['id']));
     });
