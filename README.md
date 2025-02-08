@@ -272,6 +272,9 @@ Important commands:
 
 50. Angular HTTP client - Handle request errors
 
+51. Angular HTTP - Intercept requests and responses - Part 1
+
+52. Angular HTTP - Intercept requests and responses - Part 2
 
   48-        52-
 ######  Section 11 Angular Sharing Modules  (1)
