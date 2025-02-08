@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CourseCardComponent } from '../course-card/course-card.component';
 import { ICourse } from '../app.component.models';
 import { Observable, tap } from 'rxjs';
@@ -14,9 +14,11 @@ import { CourseService } from '../services/course.service';
 export class AsyncPipeComponent implements OnInit {
   courses: ICourse[] = [];
   courses$!: Observable<ICourse[]>;
-
+  // way 1
   constructor(public courseService: CourseService) { }
 
+  // way 2
+  private courseService2 = inject(CourseService);
   ngOnInit(): void {
     this.getCourses();
   }

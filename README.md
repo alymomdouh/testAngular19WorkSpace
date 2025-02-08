@@ -264,7 +264,7 @@ Important commands:
 
 ``` 
 ######  Section 9 Angular Dependency Injection (DI)   (1)
-  47- 
+ 47. Understanding Angular Dependency Injection (DI) and Injectable Service
 ######  Section 10  Learn Angular HTTP (5)
   48-        52-
 ######  Section 11 Angular Sharing Modules  (1)
