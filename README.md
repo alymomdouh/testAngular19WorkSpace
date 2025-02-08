@@ -256,14 +256,13 @@ Important commands:
 
 45. How to Use Angular Query Parameters and QueryParamsHandling - Part 2
 
-
+46. Understanding Angular Nesting Routes
 
 ```
 > npm i @angular/fire
 >npm i firebase
 
-```
-  38-   46-
+``` 
 ######  Section 9 Angular Dependency Injection (DI)   (1)
   47- 
 ######  Section 10  Learn Angular HTTP (5)
