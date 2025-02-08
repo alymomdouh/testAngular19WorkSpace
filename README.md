@@ -267,6 +267,12 @@ Important commands:
  47. Understanding Angular Dependency Injection (DI) and Injectable Service
 ######  Section 10  Learn Angular HTTP (5)
 48. Understanding communicating with backend services using HTTP
+ 
+49. Understanding Angular Singleton Service - Wrapper Service
+
+50. Angular HTTP client - Handle request errors
+
+
   48-        52-
 ######  Section 11 Angular Sharing Modules  (1)
   53-

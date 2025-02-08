@@ -8,7 +8,6 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 export class FirestoreService {
 
   constructor(private angularFirestore: AngularFirestore) { }
-
   getAll<T>(collectionName: string): Observable<Array<T>> {
     return this.angularFirestore.collection(collectionName).snapshotChanges().pipe(
       map(snaps => this.convertSnaps<T>(snaps)),
@@ -36,4 +35,5 @@ export class FirestoreService {
 
     });
   }
+
 }

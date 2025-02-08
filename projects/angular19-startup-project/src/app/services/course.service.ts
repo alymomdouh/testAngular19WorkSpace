@@ -1,6 +1,6 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { Observable, catchError, map, throwError } from 'rxjs';
 import { ICourse } from '../app.component.models';
 
 
@@ -34,5 +34,22 @@ export class CourseService {
         }));
       }
     ));
+  }
+  ///
+  getRequest<T>(name: string): Observable<T> {
+    return this.http.get<T>(`${this.firebaseUrl}${name}.json`).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  private handleError(errorResponse: HttpErrorResponse): Observable<any> {
+    // Client -side errors
+    if (errorResponse.status === 0) {
+      console.log(`A client side error occurred: ${errorResponse.status} - ${errorResponse.error}`);
+    } else {
+      // Back-end errors
+      console.log(`A back-end error occurred: ${errorResponse.status} - ${errorResponse.error}`);
+    }
+    return throwError(() => new Error('Something bad happened, please try again later'))
   }
 }
