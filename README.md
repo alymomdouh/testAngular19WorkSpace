@@ -274,11 +274,12 @@ Important commands:
 
 51. Angular HTTP - Intercept requests and responses - Part 1
 
-52. Angular HTTP - Intercept requests and responses - Part 2
-
-  48-        52-
+52. Angular HTTP - Intercept requests and responses - Part 2 
 ######  Section 11 Angular Sharing Modules  (1)
-  53-
+53. Understanding Angular Sharing Modules
+```
+>ng g m shared --flat 
+```
 ######  Section 12  Angular Forms (10)
   54-       63- 
 ######  Section 13 Translate Angular App with ngx-translate  (7)
