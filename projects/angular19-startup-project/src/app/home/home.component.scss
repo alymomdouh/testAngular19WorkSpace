@@ -1,13 +1,17 @@
 .bg-black {
-    background-color: #000; // #101012;
+  background-color: #000; // #101012;
 }
 
 .angular-icon {
-    font-size: 130px;
-    color: #ee2ecc;
+  font-size: 130px;
+  color: #ee2ecc;
 }
 
 .course {
-    border: 1px solid #fff;
-    height: 100px;
+  border: 1px solid #fff;
+  height: 100px;
+}
+
+.visited {
+  border: 2px solid green;
 }

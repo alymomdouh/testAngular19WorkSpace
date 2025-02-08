@@ -254,6 +254,10 @@ Important commands:
 
 44. How to Use Angular Query Parameters - Part 1
 
+45. How to Use Angular Query Parameters and QueryParamsHandling - Part 2
+
+
+
 ```
 > npm i @angular/fire
 >npm i firebase

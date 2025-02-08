@@ -1,5 +1,6 @@
 import { KeyValue } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ICourseVm } from '../app.component.models';
 
 @Component({
   selector: 'app-home',
@@ -79,4 +80,94 @@ export class HomeComponent {
       value: 'Tailwind Css',
     }
   ];
+  readonly newcoursesList: Array<ICourseVm> = [
+    {
+      id: 1,
+      icon: 'fa-solid fa-hourglass-half text-success',
+      name: 'Angular 17 For Beginners',
+    },
+    {
+      id: 2,
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'RxJs',
+    },
+    {
+      id: 3,
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'NgRx',
+    },
+    {
+      id: 4,
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'Angular Forms In Depth',
+    },
+    {
+      id: 5,
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'Angular Unit Test',
+    },
+    {
+      id: 6,
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'Bootstrap 5',
+    },
+    {
+      id: 7,
+      icon: 'fa-solid fa-hourglass-start text-info',
+      name: 'Angular For Intermediate',
+    },
+    {
+      id: 8,
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'Signals',
+    },
+    {
+      id: 9,
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'Reactive Angular',
+    },
+    {
+      id: 10,
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'Angular Material',
+    },
+    {
+      id: 11,
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'Service Worker & PWA',
+    },
+    {
+      id: 12,
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'Server Side Rendering (SSR)',
+    },
+    {
+      id: 13,
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'Hydration',
+    },
+    {
+      id: 14,
+
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'Best Practices',
+    },
+    {
+      id: 15,
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'Firebase',
+    },
+    {
+      id: 16,
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'Angular Animation',
+    },
+    {
+      id: 17,
+      icon: 'fa-solid fa-hourglass-start text-danger',
+      name: 'Tailwind Css',
+    }
+  ];
+  @Input() id = '';
+
 }

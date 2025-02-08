@@ -9,7 +9,11 @@ export interface ICourse {
   sequenceNumber?: number;
   lessons?: any[]
 }
-
+export interface ICourseVm {
+  id: number;
+  name: string;
+  icon: string;
+}
 export enum CategoryType {
   beginners = 1,
   intermediate = 2,
