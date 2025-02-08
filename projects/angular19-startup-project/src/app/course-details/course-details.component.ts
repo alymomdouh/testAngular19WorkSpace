@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
 
 import { ICourse, coursesData } from '../app.component.models';
@@ -13,8 +13,9 @@ import { ICourse, coursesData } from '../app.component.models';
 export class CourseDetailsComponent implements OnInit {
 
   course!: ICourse;
+  @Input() id: string = '';
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(private readonly activatedRoute: ActivatedRoute, private router: Router) {
 
   }
 
@@ -24,10 +25,14 @@ export class CourseDetailsComponent implements OnInit {
     console.log('snapshot.params', id);
     const courseId = this.activatedRoute.snapshot.paramMap.get('id');
     console.log('snapshot.paramMap', courseId);
+    //withComponentInputBinding
+    if (this.id) {
+      this.course = this.getCourse(+this.id);
+    }
     // dynamic ways it lessons to any changes
-    this.activatedRoute.params.subscribe((res: Params) => {
-      console.log('params', res['id'], typeof (res['id']));
-    });
+    // this.activatedRoute.params.subscribe((res: Params) => {
+    //   console.log('params', res['id'], typeof (res['id']));
+    // });
 
     this.activatedRoute.paramMap.subscribe((res: ParamMap) => {
       console.log('paramMap', res.get('id'));

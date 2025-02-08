@@ -250,6 +250,8 @@ Important commands:
 
 42. Accessing Angular Route Params - All Access Methods
 
+43. How to Use @Input() to Read Angular Route Parameters - New Feature from v16
+
 ```
 > npm i @angular/fire
 >npm i firebase
