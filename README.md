@@ -280,7 +280,15 @@ Important commands:
 ```
 >ng g m shared --flat 
 ```
-######  Section 12  Angular Forms (10)
+######  Section 12  Angular Forms (10) 
+54. Introduction to forms in Angular
+
+55. Angular Template-driven Form - Mutable Form - Part 1
+
+56. Angular Template-driven Form - Mutable Form - Part 2
+
+57. Angular Template-driven Form - Track control states
+
   54-       63- 
 ######  Section 13 Translate Angular App with ngx-translate  (7)
   64-     70- 

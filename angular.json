@@ -34,7 +34,9 @@
             ],
             "styles": [
               "projects/angular19-startup-project/src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+              "@angular/material/prebuilt-themes/indigo-pink.css"
             ],
             "scripts": [],
             "server": "projects/angular19-startup-project/src/main.server.ts",
