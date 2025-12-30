@@ -16,7 +16,11 @@ export class CourseDetailsComponent implements OnInit {
   course!: ICourse;
   @Input() id: string = '';
 
-  constructor(private readonly activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(
+    private readonly activatedRoute: ActivatedRoute,
+    private router: Router,
+    private activedRoute: ActivatedRoute
+  ) {
 
   }
 
@@ -45,9 +49,19 @@ export class CourseDetailsComponent implements OnInit {
     //   this.course = this.getCourse(+this.id);
     // });
 
-    this.activatedRoute.queryParamMap.subscribe(res => {
-      console.log('queryParams', res.get('id'));
-      this.course = this.getCourse(Number(res.get('id')));
+    // if id come in queryParams
+    // this.activatedRoute.queryParamMap.subscribe(res => {
+    //   console.log('queryParams', res.get('id'));
+    //   this.course = this.getCourse(Number(res.get('id')));
+    // });
+
+    // if id come in url guery as course/1
+    // this.activatedRoute.data.subscribe(res => {
+    //   console.log(res);
+    //   this.course = res['courseDataResult'];
+    // });
+    this.activatedRoute.data.subscribe(({ courseDataResult }) => {
+      this.course = courseDataResult;
     });
   }
 

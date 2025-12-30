@@ -118,7 +118,7 @@ export class CourseCardComponent implements OnChanges, OnInit, DoCheck,
   @Input({ required: true }) index!: number;
   @Output() viewCourseEvent = new EventEmitter<ICourse>();
   name = "viewCourse";
-  viewCourse(): void {
+  viewCourse(): void { 
     // this.viewCourseEvent.emit(this.course);
     // console.log('viewCourse clicked! for output component');
     // this.index = 100;
@@ -126,7 +126,10 @@ export class CourseCardComponent implements OnChanges, OnInit, DoCheck,
 
     // this.router.navigateByUrl(`course-details/${this.course.id}`);
     //this.router.navigate([`course-details/${this.course.id}`]);
-    this.router.navigate([`course`], { queryParams: { id: this.course.id } });
+    // for courses in cash memery
+    // this.router.navigate([`course`], { queryParams: { id: this.course.id } });
+    // this.router.navigate([`course`], { queryParams: { id: this.course.scrambledId } });
+    this.router.navigate([`course-details/${this.course.scrambledId}`]);
   }
 
   // to view or access enum in html element

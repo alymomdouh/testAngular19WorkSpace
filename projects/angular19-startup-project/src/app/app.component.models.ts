@@ -1,6 +1,7 @@
 export interface ICourse {
   id: number;
   name?: string;
+  scrambledId?: string;
   description: string;
   longDescription: string;
   category: CategoryType;

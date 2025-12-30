@@ -6,6 +6,7 @@ import { FirestoreService } from '../shared/services/firestore.service';
 import { Firestore, collection, getDocs } from 'firebase/firestore';
 import { coursesData, ICourse } from '../app.component.models';
 import { SharedModule } from '../shared/shared.module';
+import { CourseService } from '../services/course.service';
 
 @Component({
   selector: 'app-course-list',
@@ -19,7 +20,10 @@ export class CourseListComponent implements OnInit {
 
   courses: Array<ICourse> = coursesData;
   //firestore = inject(Firestore);
-  constructor(private firestoreService: FirestoreService) { }
+  constructor(
+    private firestoreService: FirestoreService,
+    private courseService: CourseService
+  ) { }
 
   ngOnInit(): void {
     // getDocs(collection(this.firestore, 'courses')).then((response) => {
@@ -28,6 +32,11 @@ export class CourseListComponent implements OnInit {
     // this.firestoreService.getAll('courses').subscribe(res => {
     //   console.log('res', res);
     // });
-    this.courses = coursesData
+    this.courseService.getCourses().subscribe({
+      next: (values: ICourse[]) => {
+        this.courses = values;
+      },
+    });
+    // this.courses = coursesData
   }
 }

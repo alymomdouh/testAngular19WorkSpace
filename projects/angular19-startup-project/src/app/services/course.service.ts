@@ -35,7 +35,25 @@ export class CourseService {
       }
     ));
   }
-  ///
+  getCourseById(scrambledId: string): Observable<ICourse> {
+    let contentHeader = new HttpHeaders({ "Content-Type": "application/json" });
+    return this.http
+      .get<any>(`${this.firebaseUrl}/courses/${scrambledId}.json`)
+      .pipe(
+        map(course => ({
+          id: course.id,
+          scrambledId: scrambledId,
+          name: course.name,
+          description: course.description,
+          category: course.category,
+          imageUrl: course.imageUrl,
+          lessons: course.lessons ?? [],
+          lessonsCount: course.lessons?.length ?? 0,
+          longDescription: course.longDescription,
+          sequenceNumber: course.sequenceNumber
+        }))
+      );
+  }
   getRequest<T>(name: string): Observable<T> {
     return this.http.get<T>(`${this.firebaseUrl}${name}.json`).pipe(
       catchError(this.handleError)

@@ -6,6 +6,8 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './account/login/login.component';
 import { RegisterComponent } from './account/register/register.component';
+import { courseDepResolver } from './shared/resolvers/course-dep.resolver';
+import { courseResolver } from './shared/resolvers/course.resolver';
 
 export const routes: Routes = [
   {
@@ -18,7 +20,9 @@ export const routes: Routes = [
   },
   {
     path: 'course-details/:id',
-    component: CourseDetailsComponent
+    component: CourseDetailsComponent,
+    //resolve: { courseDataResult: courseDepResolver }
+    resolve: { courseDataResult: courseResolver }
   },
   {
     path: 'course',
