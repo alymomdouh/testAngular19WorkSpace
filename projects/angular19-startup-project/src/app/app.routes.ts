@@ -8,6 +8,7 @@ import { LoginComponent } from './account/login/login.component';
 import { RegisterComponent } from './account/register/register.component';
 import { courseDepResolver } from './shared/resolvers/course-dep.resolver';
 import { courseResolver } from './shared/resolvers/course.resolver';
+import { ExplanationComponent } from './explanation/explanation.component';
 
 export const routes: Routes = [
   {
@@ -27,6 +28,10 @@ export const routes: Routes = [
   {
     path: 'course',
     component: CourseDetailsComponent
+  },
+  {
+    path: 'explanation',
+    component: ExplanationComponent
   },
   {
     path: 'account',

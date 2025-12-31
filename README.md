@@ -301,3 +301,10 @@ Important commands:
   - ng g resolver resolvers/course 
   // video not completed yet
 ```
+##### Section 20: Angular Decorators (Metadata Properties and Scope)
+```
+97 - @ViewChild Decorator (Metadata Properties and Scope)
+to make parent component to access child component 
+Scope   only the parent can access child component what about if child component contain inside it child component or nested 
+here can not access it .it is only one level . 
+```
