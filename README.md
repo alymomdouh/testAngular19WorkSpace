@@ -303,8 +303,16 @@ Important commands:
 ```
 ##### Section 20: Angular Decorators (Metadata Properties and Scope)
 ```
-97 - @ViewChild Decorator (Metadata Properties and Scope)
+ ###  97 - @ViewChild Decorator (Metadata Properties and Scope)
 to make parent component to access child component 
 Scope   only the parent can access child component what about if child component contain inside it child component or nested 
 here can not access it .it is only one level . 
+also query only first matching item. 
 ```
+### 98. Understating @ViewChildren Decorator
+```
+same like ViewChild  but here not track only first item it track all matching items.
+
+```
+
+

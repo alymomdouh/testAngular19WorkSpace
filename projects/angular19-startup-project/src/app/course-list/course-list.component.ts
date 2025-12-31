@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CourseCardComponent } from '../course-card/course-card.component';
@@ -16,14 +16,21 @@ import { CourseService } from '../services/course.service';
   styleUrl: './course-list.component.scss',
   //providers: [Firestore]
 })
-export class CourseListComponent implements OnInit {
+export class CourseListComponent implements OnInit, AfterViewInit {
 
+  @ViewChildren('card') coursesChildren1!: QueryList<ElementRef<HTMLElement>>;
+  @ViewChildren(CourseCardComponent) coursesChildren2!: QueryList<CourseCardComponent>;
   courses: Array<ICourse> = coursesData;
   //firestore = inject(Firestore);
   constructor(
     private firestoreService: FirestoreService,
     private courseService: CourseService
   ) { }
+  ngAfterViewInit(): void {
+    this.coursesChildren2.changes.subscribe((res: QueryList<CourseCardComponent>) => {
+      console.log('coursesChildren2', res);
+    });
+  }
 
   ngOnInit(): void {
     // getDocs(collection(this.firestore, 'courses')).then((response) => {
@@ -34,7 +41,8 @@ export class CourseListComponent implements OnInit {
     // });
     this.courseService.getCourses().subscribe({
       next: (values: ICourse[]) => {
-        this.courses = values;
+        const sortedCourses = values.sort((a, b) => a.id - b.id);
+        this.courses = sortedCourses;
       },
     });
     // this.courses = coursesData
