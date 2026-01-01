@@ -403,4 +403,6 @@ Imperative Programming:focus on what steps make to get result
 >ng g c card --skip-tests=true 
 
 ```
+###  112. Understanding ngTemplateOutletContext
+
 

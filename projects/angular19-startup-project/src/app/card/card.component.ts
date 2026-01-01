@@ -12,4 +12,9 @@ export class CardComponent {
   cardBodyTemp = input<TemplateRef<HTMLElement>>();
   // can make input with type signal
   cardBodyTemp1 = input.required<TemplateRef<HTMLElement>>
+
+  course: { title: string; lessons: number } = {
+    title: 'Angular 18 Course',
+    lessons: 192
+  };
 }
