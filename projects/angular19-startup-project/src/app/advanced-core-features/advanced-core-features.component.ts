@@ -19,5 +19,5 @@ export class AdvancedCoreFeaturesComponent {
 
   loadTemplate(): void {
     this.container.createEmbeddedView(this.template);
-  }
+  }   
 }
