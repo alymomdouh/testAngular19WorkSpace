@@ -12,3 +12,18 @@
 <button (click)="isVisible=!isVisible;">
   Toggle
 </button>
+
+<h1> test content children</h1>
+<app-child>
+  <dir-course-name name="content 1">content 1</dir-course-name>
+  <dir-course-name name="content 2">content 2</dir-course-name>
+  <dir-course-name name="content 3">content 3</dir-course-name>
+  <!-- need to be nested  -->
+  @if (showNested) {
+  <app-child>
+    <dir-course-name name="content 4">content 4</dir-course-name>
+    <dir-course-name name="content 5">content 5</dir-course-name>
+  </app-child>
+  }
+</app-child>
+<button (click)="toggleNested()">Toggle Nested</button>

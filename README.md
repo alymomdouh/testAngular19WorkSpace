@@ -321,3 +321,8 @@ to enter or pass elements or content from parent to child component
 work only with first matching item 
 ```
 
+### 100. Understating @ContentChildren Decorator
+
+```
+to access content or list of content and can also access nested childs 
+```

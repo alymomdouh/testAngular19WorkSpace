@@ -1,10 +1,11 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
 import { CommonModule } from '@angular/common';
+import { CourseNameDirective } from '../shared/directives/course-name.directive';
 
 @Component({
   selector: 'app-explanation',
-  imports: [ChildComponent, CommonModule],
+  imports: [ChildComponent, CommonModule, CourseNameDirective],
   templateUrl: './explanation.component.html',
   styleUrl: './explanation.component.scss'
 })
@@ -31,4 +32,10 @@ export class ExplanationComponent implements OnInit, AfterViewInit {
   // other way to access the component by name
   @ViewChild(ChildComponent, { static: true, read: ElementRef }) child3!: ChildComponent;
 
+
+
+  showNested = false;
+  toggleNested() {
+    this.showNested = !this.showNested;
+  }
 }

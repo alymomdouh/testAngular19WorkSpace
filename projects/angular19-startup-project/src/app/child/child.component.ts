@@ -1,5 +1,5 @@
-import { AfterContentInit, Component, ContentChild, ElementRef } from '@angular/core';
-import { console } from 'inspector';
+import { AfterContentInit, Component, ContentChild, ContentChildren, ElementRef, QueryList } from '@angular/core';
+import { CourseNameDirective } from '../shared/directives/course-name.directive';
 
 @Component({
   selector: 'app-child',
@@ -26,4 +26,17 @@ export class ChildComponent implements AfterContentInit {
       this.content.nativeElement.style.color = 'red';
     }
   }
+
+  // example of using ContentChildren decorator to access the content children directives
+  // this as default will not acces nested content children directives
+   @ContentChildren(CourseNameDirective) courseNames!: QueryList<CourseNameDirective>;
+  // example of using ContentChildren decorator to access the content children directives
+  @ContentChildren(CourseNameDirective, { descendants: true }) courseNamesNested!: QueryList<CourseNameDirective>;
+  get gettopcontent() {
+    return this.courseNames.map(c => c.name).join(', ');
+  }
+  get getNestedContent() {
+    return this.courseNamesNested.map(c => c.name).join(', ');
+  }
+
 }
