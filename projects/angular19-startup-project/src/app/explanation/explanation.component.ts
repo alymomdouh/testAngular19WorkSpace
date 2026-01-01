@@ -3,10 +3,11 @@ import { ChildComponent } from '../child/child.component';
 import { CommonModule } from '@angular/common';
 import { CourseNameDirective } from '../shared/directives/course-name.directive';
 import { SingleSlotComponent } from '../single-slot/single-slot.component';
+import { MultiSlotComponent } from '../multi-slot/multi-slot.component';
 
 @Component({
   selector: 'app-explanation',
-  imports: [ChildComponent, CommonModule, CourseNameDirective, SingleSlotComponent],
+  imports: [ChildComponent, CommonModule, CourseNameDirective, SingleSlotComponent, MultiSlotComponent],
   templateUrl: './explanation.component.html',
   styleUrl: './explanation.component.scss'
 })

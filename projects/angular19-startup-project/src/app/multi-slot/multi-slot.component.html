@@ -1,0 +1,16 @@
+<div class="bg-warning m-3 p-2 rounded">
+  <p>multi-slot works!</p>
+  <h3>Default Slot</h3>
+  <ng-content />
+  <hr />
+  <h3>Header Slot</h3>
+  <ng-content select="[header]" />
+  <hr />
+  <h3>Body Slot</h3>
+  <ng-content select="[body]" />
+  <hr />
+  <h3>Footer Slot</h3>
+  <ng-content select="[footer]" />
+  <hr />
+  <div>End</div>
+</div>

@@ -367,3 +367,10 @@ help tool like [Angular Update guide](https://angular.dev/update-guide)
 ```
 <ng-content />
 ```
+
+###  105. Angular Content projection - Multi-slot content projection
+```
+<ng-content select="[footer]"
+```
+
+

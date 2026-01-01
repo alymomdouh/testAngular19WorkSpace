@@ -4,6 +4,13 @@
   <h2>Single Slot Content Projection</h2>
 </app-single-slot>
 
+<app-multi-slot>
+  <h2>Multi Slot Content Projection Default</h2>
+  <h2 header>Multi Slot Content Projection Header</h2>
+  <h2 body>Multi Slot Content Projection Body</h2>
+  <h2 footer>Multi Slot Content Projection Footer</h2>
+</app-multi-slot>
+
 <app-child *ngIf="isVisible" #child1>
   <div #content>
     My Content For Child One
