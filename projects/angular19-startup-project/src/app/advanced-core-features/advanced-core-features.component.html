@@ -1,0 +1,51 @@
+<!-- <div class="container-fluid">
+  <div class="row">
+    <h3 class="fw-bold">ng-container</h3>
+    <div class="col-12">
+      <ng-container *ngIf="show">
+        <ng-container *ngFor="let lesson of lessons">
+          {{lesson}}
+        </ng-container>
+      </ng-container>
+      <hr>
+      @if (show) {
+        {{title}}
+      }
+      <hr>
+      @for(lesson of lessons; track lesson) {
+        {{lesson}}
+      }
+    </div>
+  </div>
+</div> -->
+
+
+<!-- <ng-template [ngIf]="show" [ngIfElse]="lessonTempRef">
+  <div class="row">
+    <div class="col-12">
+      How it works
+    </div>
+  </div>
+</ng-template>
+
+<div *ngIf="show; else lessonTempRef" class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      How it works
+    </div>
+  </div>
+</div> -->
+
+<button class="btn btn-primary" (click)="loadTemplate()">Load Template</button>
+
+<ng-template #lessonTempRef>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        ng-template lesson
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-container #container></ng-container>

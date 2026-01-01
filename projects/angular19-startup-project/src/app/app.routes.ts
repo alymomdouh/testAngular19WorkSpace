@@ -9,6 +9,7 @@ import { RegisterComponent } from './account/register/register.component';
 import { courseDepResolver } from './shared/resolvers/course-dep.resolver';
 import { courseResolver } from './shared/resolvers/course.resolver';
 import { ExplanationComponent } from './explanation/explanation.component';
+import { AdvancedCoreFeaturesComponent } from './advanced-core-features/advanced-core-features.component';
 
 export const routes: Routes = [
   {
@@ -32,6 +33,10 @@ export const routes: Routes = [
   {
     path: 'explanation',
     component: ExplanationComponent
+  },
+  {
+    path: 'advanced-core-feature',
+    component: AdvancedCoreFeaturesComponent
   },
   {
     path: 'account',

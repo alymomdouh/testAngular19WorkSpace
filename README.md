@@ -372,5 +372,21 @@ help tool like [Angular Update guide](https://angular.dev/update-guide)
 ```
 <ng-content select="[footer]"
 ```
+#####  Section 25: Advanced Core Features
+
+###  106. Understanding ng-container
+```
+ng-container  not render in html 
+
+```
+###  107. Introduction to ng-template
+```
+not render its content in html 
+only put html content inside it and give this template a reference name 
+then call this reference from other side in html 
+like if and else and  
+```
+
+###  108. Understanding ng-template usage with TemplateRef
 
 
