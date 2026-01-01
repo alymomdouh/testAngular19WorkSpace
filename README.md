@@ -321,8 +321,29 @@ to enter or pass elements or content from parent to child component
 work only with first matching item 
 ```
 
-### 100. Understating @ContentChildren Decorator
+###
 
 ```
 to access content or list of content and can also access nested childs 
 ```
+
+##### Section 21: How to upgrade an Angular app to a specific or latest version
+
+### 101. How to upgrade an Angular app to a specific or latest version
+
+```
+types of upgrade
+1- major upgrade into big number   like from 7 to 8 or 9
+2- menu  small number like from 7.1 to 7.3 
+
+commands 
+
+>ng update 
+> npm outdated 
+
+```
+help tool like [Angular Update guide](https://angular.dev/update-guide)
+
+[change log](https://github.com/angular/angular/blob/main/CHANGELOG.md)
+
+
