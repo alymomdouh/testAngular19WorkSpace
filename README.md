@@ -354,3 +354,16 @@ help tool like [Angular Update guide](https://angular.dev/update-guide)
 ```
 >ng build
 ```
+
+##### Section 23: Conclusion & Next Steps - Wrapping Up Your First Angular 17 Beginners Part
+
+###  103. Conclusion & Next Steps - Wrapping Up Your First Angular 17 Course
+
+
+##### Section 24: Angular Content Projection
+
+###  104. Content projection - Single-slot content projection
+
+```
+<ng-content />
+```

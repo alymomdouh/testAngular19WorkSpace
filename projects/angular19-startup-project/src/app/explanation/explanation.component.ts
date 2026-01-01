@@ -2,10 +2,11 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 import { ChildComponent } from '../child/child.component';
 import { CommonModule } from '@angular/common';
 import { CourseNameDirective } from '../shared/directives/course-name.directive';
+import { SingleSlotComponent } from '../single-slot/single-slot.component';
 
 @Component({
   selector: 'app-explanation',
-  imports: [ChildComponent, CommonModule, CourseNameDirective],
+  imports: [ChildComponent, CommonModule, CourseNameDirective, SingleSlotComponent],
   templateUrl: './explanation.component.html',
   styleUrl: './explanation.component.scss'
 })
