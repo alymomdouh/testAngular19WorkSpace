@@ -62,3 +62,21 @@
 </ng-template>
 
 <ng-container *ngTemplateOutlet="lessonTempRef"></ng-container>
+
+<!--  -->
+<h1 class="mb-0">Creating Configurable Components with ng-template in Angular</h1>
+ 
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <app-card [cardBodyTemp]="parentBodyTemp" />
+    </div>
+  </div>
+</div>
+
+
+<ng-template #parentBodyTemp>
+  <div class="card-text">The content from parent component</div>
+</ng-template>
+

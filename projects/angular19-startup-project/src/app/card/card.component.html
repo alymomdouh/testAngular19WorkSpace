@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-header">
+    <h1 class="fw-bold mb-0">Card Header</h1>
+  </div>
+  <div class="card-body">
+    <ng-container [ngTemplateOutlet]="cardBodyTemp() || cardBody"></ng-container>
+  </div>
+</div>
+
+<ng-template #cardBody>
+  <div class="card-text">This is a card component</div>
+</ng-template>

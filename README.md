@@ -398,4 +398,9 @@ Declarative Programming: focus on result not steps to get result
 Imperative Programming:focus on what steps make to get result 
 
 ```
+###  111. Creating Configurable Components with ng-template in Angular
+```
+>ng g c card --skip-tests=true 
+
+```
 

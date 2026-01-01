@@ -1,9 +1,10 @@
 import { CommonModule, NgTemplateOutlet } from '@angular/common';
 import { Component, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-advanced-core-features',
-  imports: [CommonModule, NgTemplateOutlet],
+  imports: [CommonModule, NgTemplateOutlet, CardComponent],
   templateUrl: './advanced-core-features.component.html',
   styleUrl: './advanced-core-features.component.scss'
 })
