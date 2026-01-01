@@ -1,11 +1,10 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
-import { Console } from 'console';
-import { NgIf } from "../../../../../node_modules/@angular/common/index";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-explanation',
-  imports: [ChildComponent, NgIf],
+  imports: [ChildComponent, CommonModule],
   templateUrl: './explanation.component.html',
   styleUrl: './explanation.component.scss'
 })

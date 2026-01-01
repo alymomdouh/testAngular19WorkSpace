@@ -314,5 +314,10 @@ also query only first matching item.
 same like ViewChild  but here not track only first item it track all matching items.
 
 ```
+###  99. Understating @ContentChild Decorator
 
+```
+to enter or pass elements or content from parent to child component
+work only with first matching item 
+```
 

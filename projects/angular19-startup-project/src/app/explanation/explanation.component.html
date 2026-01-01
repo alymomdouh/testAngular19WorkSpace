@@ -1,6 +1,14 @@
 <p #title>explanation works!</p>
-<app-child *ngIf="isVisible" #child1></app-child>
-<app-child *ngIf="!isVisible" #child2></app-child>
+<app-child *ngIf="isVisible" #child1>
+  <div #content>
+    My Content For Child One
+  </div>
+</app-child>
+<app-child *ngIf="!isVisible" #child2>
+  <div #content>
+    My Content For Child Two
+  </div>
+</app-child>
 <button (click)="isVisible=!isVisible;">
   Toggle
 </button>
