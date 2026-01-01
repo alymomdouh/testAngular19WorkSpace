@@ -36,8 +36,21 @@
   </div>
 </div> -->
 
+<!-- video 108 -->
+<!--
 <button class="btn btn-primary" (click)="loadTemplate()">Load Template</button>
+ <ng-template #lessonTempRef>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        ng-template lesson
+      </div>
+    </div>
+  </div>
+</ng-template>
 
+<ng-container #container></ng-container> -->
+<!-- video 109  -->
 <ng-template #lessonTempRef>
   <div class="container-fluid">
     <div class="row">
@@ -48,4 +61,4 @@
   </div>
 </ng-template>
 
-<ng-container #container></ng-container>
+<ng-container *ngTemplateOutlet="lessonTempRef"></ng-container>

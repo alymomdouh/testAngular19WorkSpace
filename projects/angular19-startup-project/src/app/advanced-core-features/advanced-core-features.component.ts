@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgTemplateOutlet } from '@angular/common';
 import { Component, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 
 @Component({
   selector: 'app-advanced-core-features',
-  imports: [CommonModule],
+  imports: [CommonModule, NgTemplateOutlet],
   templateUrl: './advanced-core-features.component.html',
   styleUrl: './advanced-core-features.component.scss'
 })
@@ -19,5 +19,5 @@ export class AdvancedCoreFeaturesComponent {
 
   loadTemplate(): void {
     this.container.createEmbeddedView(this.template);
-  }   
+  }
 }
