@@ -391,3 +391,11 @@ like if and else and
 
 ###  109. Introduction to NgTemplateOutlet Directive
 
+###  110. Declarative vs Imperative Programming Paradigms in Angular
+```
+Declarative Programming: focus on result not steps to get result 
+
+Imperative Programming:focus on what steps make to get result 
+
+```
+
