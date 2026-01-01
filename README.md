@@ -347,3 +347,10 @@ help tool like [Angular Update guide](https://angular.dev/update-guide)
 [change log](https://github.com/angular/angular/blob/main/CHANGELOG.md)
 
 
+##### Section 22: Deploy Angular App
+
+### 102. How to build your first Angular app
+
+```
+>ng build
+```
