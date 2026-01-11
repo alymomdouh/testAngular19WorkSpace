@@ -406,3 +406,11 @@ Imperative Programming:focus on what steps make to get result
 ###  112. Understanding ngTemplateOutletContext
 
 ###  113. Understanding ngTemplateOutletInjector - From v14
+
+
+#####  Section 26: Angular Signals
+
+###  114. Angular Signals - What are signals?
+ 
+ Angular Signals is system used to track the status for element where the change done in the system to optimize 
+
