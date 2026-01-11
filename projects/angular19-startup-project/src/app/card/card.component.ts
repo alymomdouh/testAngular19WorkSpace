@@ -1,11 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, input, TemplateRef } from '@angular/core';
+import { Component, inject, Injector, input, TemplateRef } from '@angular/core';
+import { CardService } from './card.service';
 
 @Component({
   selector: 'app-card',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+  styleUrls: ['./card.component.scss'],
+  providers: [CardService]
 })
 export class CardComponent {
 
@@ -17,4 +20,11 @@ export class CardComponent {
     title: 'Angular 18 Course',
     lessons: 192
   };
+
+
+  cardService = inject(CardService);
+  injector = inject(Injector);
+
+  cardActionTemp = input<TemplateRef<HTMLElement>>();
+
 }

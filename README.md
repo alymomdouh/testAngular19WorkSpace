@@ -405,4 +405,4 @@ Imperative Programming:focus on what steps make to get result
 ```
 ###  112. Understanding ngTemplateOutletContext
 
-
+###  113. Understanding ngTemplateOutletInjector - From v14
