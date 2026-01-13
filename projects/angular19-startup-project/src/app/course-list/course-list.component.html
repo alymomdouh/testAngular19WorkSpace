@@ -1,4 +1,5 @@
 <div class="container-fluid">
+  <h1>Normal Courses</h1>
   <div class="row">
     @for (course of courses; track course.id) {
     <div class="col-md-3 col-12">
@@ -8,4 +9,15 @@
     <h1>No Courses Found!</h1>
     }
   </div>
+  <h1>Signal Courses</h1>
+  <div class="row">
+    @for (course of courseSignal(); track course.id) {
+    <div class="col-md-3 col-12">
+      <app-course-card [course]="course" [index]="$index" #card />
+    </div>
+    } @empty {
+    <h1>No Courses Found!</h1>
+    }
+  </div>
+  <button (click)="ClickMe()"> Click Me</button>
 </div>

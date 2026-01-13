@@ -414,3 +414,6 @@ Imperative Programming:focus on what steps make to get result
  
  Angular Signals is system used to track the status for element where the change done in the system to optimize 
 
+###  115. Angular Signals - Writable signals
+
+can make update or set 

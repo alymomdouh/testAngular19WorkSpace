@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren, inject } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Inject, OnInit, QueryList, ViewChildren, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CourseCardComponent } from '../course-card/course-card.component';
@@ -7,6 +7,7 @@ import { Firestore, collection, getDocs } from 'firebase/firestore';
 import { coursesData, ICourse } from '../app.component.models';
 import { SharedModule } from '../shared/shared.module';
 import { CourseService } from '../services/course.service';
+import { single } from 'rxjs/internal/operators/single';
 
 @Component({
   selector: 'app-course-list',
@@ -14,14 +15,19 @@ import { CourseService } from '../services/course.service';
   imports: [CourseCardComponent, SharedModule],
   templateUrl: './course-list.component.html',
   styleUrl: './course-list.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
   //providers: [Firestore]
 })
 export class CourseListComponent implements OnInit, AfterViewInit {
 
   @ViewChildren('card') coursesChildren1!: QueryList<ElementRef<HTMLElement>>;
   @ViewChildren(CourseCardComponent) coursesChildren2!: QueryList<CourseCardComponent>;
-  courses: Array<ICourse> = coursesData;
+  //courses: Array<ICourse> = coursesData;
+  courses: Array<ICourse> = [];
+  //courseSignal = single<Array<ICourse>>();
+  courseSignal = signal<ICourse[]>([]);
   //firestore = inject(Firestore);
+  private changeDetectorRef = inject(ChangeDetectorRef);
   constructor(
     private firestoreService: FirestoreService,
     private courseService: CourseService
@@ -39,12 +45,20 @@ export class CourseListComponent implements OnInit, AfterViewInit {
     // this.firestoreService.getAll('courses').subscribe(res => {
     //   console.log('res', res);
     // });
+    debugger
     this.courseService.getCourses().subscribe({
       next: (values: ICourse[]) => {
+        debugger
         const sortedCourses = values.sort((a, b) => a.id - b.id);
         this.courses = sortedCourses;
+        this.courseSignal.set(sortedCourses);
+        this.changeDetectorRef.detectChanges();
+        console.log('sortedCourses', sortedCourses);
       },
     });
     // this.courses = coursesData
+  }
+  ClickMe() {
+
   }
 }
