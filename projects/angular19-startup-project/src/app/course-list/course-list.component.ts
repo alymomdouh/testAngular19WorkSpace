@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Inject, OnInit, QueryList, ViewChildren, computed, inject, signal } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Inject, OnInit, QueryList, ViewChildren, computed, effect, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CourseCardComponent } from '../course-card/course-card.component';
@@ -8,6 +8,7 @@ import { coursesData, ICourse } from '../app.component.models';
 import { SharedModule } from '../shared/shared.module';
 import { CourseService } from '../services/course.service';
 import { single } from 'rxjs/internal/operators/single';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-list',
@@ -35,14 +36,46 @@ export class CourseListComponent implements OnInit, AfterViewInit {
       return this.courses.map(a => ({ ...a, name: "#" + a.name }));
     }
   });
-  displedNamesSignal = signal<string[]>(["name","age","level"]).asReadonly();
+  //  readonly categoryType = CategoryType;
+  displedNamesSignal = signal<string[]>(["name", "age", "level"]).asReadonly();
   searchText = signal<string>('');
   //firestore = inject(Firestore);
   private changeDetectorRef = inject(ChangeDetectorRef);
   constructor(
     private firestoreService: FirestoreService,
-    private courseService: CourseService
-  ) { }
+    private courseService: CourseService,
+    private router: Router
+  ) {
+
+    /// Run on every changes
+    // effect(() => {
+    //   // this.courseSignal.set([]);// will give error because enter in infinity loop
+    //   // every time make change in signal then then make same change then enter again
+    //   console.log('coursesComputed', this.coursesComputed().length);
+    // }, { allowSignalWrites: true });
+    // allowSignalWrites   not open in infinity loop only one time
+
+
+    // const effectRef = effect(() => {
+    //   // this.courseSignal.set([]);// will give error because enter in infinity loop
+    //   // every time make change in signal then then make same change then enter again
+    //   console.log('coursesComputed', this.coursesComputed().length);
+    // }, { allowSignalWrites: true, manualCleanup: true });
+    // // allowSignalWrites   not open in infinity loop only one time
+    // effectRef.destroy();
+
+    effect((onCleanup) => {
+      // this.courses.set([]);
+      console.log('coursesComputed', this.coursesComputed().length);
+      onCleanup(() => {
+        // clean whatever
+        console.log('on cleanup');
+      });
+    });
+
+
+
+  }
   ngAfterViewInit(): void {
     this.coursesChildren2.changes.subscribe((res: QueryList<CourseCardComponent>) => {
       console.log('coursesChildren2', res);
@@ -50,13 +83,15 @@ export class CourseListComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.getCourses();
+  }
+  private getCourses(): void {
     // getDocs(collection(this.firestore, 'courses')).then((response) => {
     //   console.log(response.docs)
     // });
     // this.firestoreService.getAll('courses').subscribe(res => {
     //   console.log('res', res);
     // });
-    debugger
     this.courseService.getCourses().subscribe({
       next: (values: ICourse[]) => {
         debugger
@@ -71,6 +106,9 @@ export class CourseListComponent implements OnInit, AfterViewInit {
   }
   ClickMe() {
 
+  }
+  navigateToLessons(course: ICourse): void {
+    this.router.navigateByUrl(`public/lessons/${course.scrambledId}`)
   }
   UpdateSearchText(value: string) {
     debugger

@@ -429,3 +429,8 @@ Computed Signals  not allowed to make set or update and always depend on other s
 
 Readonly Signal like Computed Signals  in not allowed to set or update it 
 but Computed Signals is dynamic depend on this Signal 
+
+###  118. Angular Signals - Effects
+
+use Effects to track changes inside signals 
+
