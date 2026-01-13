@@ -424,3 +424,8 @@ signal== WritableSignal
 Computed Signals  not allowed to make set or update and always depend on other signal 
 
 
+###  117. Angular Signals - Readonly Signal
+
+
+Readonly Signal like Computed Signals  in not allowed to set or update it 
+but Computed Signals is dynamic depend on this Signal 

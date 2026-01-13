@@ -35,6 +35,7 @@ export class CourseListComponent implements OnInit, AfterViewInit {
       return this.courses.map(a => ({ ...a, name: "#" + a.name }));
     }
   });
+  displedNamesSignal = signal<string[]>(["name","age","level"]).asReadonly();
   searchText = signal<string>('');
   //firestore = inject(Firestore);
   private changeDetectorRef = inject(ChangeDetectorRef);
