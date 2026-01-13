@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, EventEmitter, Input, input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, booleanAttribute, Component, DoCheck, EventEmitter, Input, input, numberAttribute, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { CategoryType, ICourse } from '../app.component.models';
 import { CommonModule } from '@angular/common';
 import { ChildViewComponent } from '../child-view/child-view.component';
@@ -122,6 +122,13 @@ export class CourseCardComponent implements OnChanges, OnInit, DoCheck,
   courseInput = input<ICourse>();// default not required
   courseInput2 = input.required<ICourse>({ alias: 'courseObj' });
 
+  @Input({ required: true }) disabled = false;
+  //booleanAttribute   :convert any coming value into boolean
+  @Input({ required: true, transform: booleanAttribute }) disabled1 = false;
+  // if comming not number will set NaN   => mean not a number
+  @Input({ required: true, transform: numberAttribute }) counter = 0;
+  // if fail to convert value  take default value
+  @Input({ required: true, transform: (value: unknown) => numberAttribute(value, 1) }) counter1 = 0;
 
   name = "viewCourse";
   viewCourse(): void {

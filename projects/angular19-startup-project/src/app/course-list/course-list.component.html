@@ -38,7 +38,8 @@
   <div class="row">
     @for (course of coursesComputed(); track course.id) {
     <div class="col-md-3 col-12">
-      <app-course-card [course]="course" [index]="$index" #card [courseObj]="course" />
+      <app-course-card [course]="course" [index]="$index" #card [courseObj]="course" [disabled]="true"
+        disabled1="true" />
     </div>
     } @empty {
     <h1>No Courses Found!</h1>
