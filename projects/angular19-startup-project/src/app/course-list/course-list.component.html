@@ -8,7 +8,7 @@
       </mat-form-field>
     </div>
   </div>
-<!--
+  <!--
   <h1>Normal Courses</h1>
   <div class="row">
     @for (course of courses; track course.id) {
@@ -21,7 +21,7 @@
   </div>
    -->
 
-<!--
+  <!--
   <h1>Signal Courses</h1>
   <div class="row">
     @for (course of courseSignal(); track course.id) {
@@ -38,7 +38,7 @@
   <div class="row">
     @for (course of coursesComputed(); track course.id) {
     <div class="col-md-3 col-12">
-      <app-course-card [course]="course" [index]="$index" #card />
+      <app-course-card [course]="course" [index]="$index" #card [courseObj]="course" />
     </div>
     } @empty {
     <h1>No Courses Found!</h1>

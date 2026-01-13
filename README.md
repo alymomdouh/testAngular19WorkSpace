@@ -434,3 +434,6 @@ but Computed Signals is dynamic depend on this Signal
 
 use Effects to track changes inside signals 
 
+###  119. Signal inputs
+
+

@@ -117,8 +117,14 @@ export class CourseCardComponent implements OnChanges, OnInit, DoCheck,
   @Input({ required: true }) course: ICourse = {} as ICourse;
   @Input({ required: true }) index!: number;
   @Output() viewCourseEvent = new EventEmitter<ICourse>();
+
+  stringnput = input<string>("default value");// default not required
+  courseInput = input<ICourse>();// default not required
+  courseInput2 = input.required<ICourse>({ alias: 'courseObj' });
+
+
   name = "viewCourse";
-  viewCourse(): void { 
+  viewCourse(): void {
     // this.viewCourseEvent.emit(this.course);
     // console.log('viewCourse clicked! for output component');
     // this.index = 100;
