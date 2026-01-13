@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Inject, OnInit, QueryList, ViewChildren, inject, signal } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Inject, OnInit, QueryList, ViewChildren, computed, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CourseCardComponent } from '../course-card/course-card.component';
@@ -26,6 +26,16 @@ export class CourseListComponent implements OnInit, AfterViewInit {
   courses: Array<ICourse> = [];
   //courseSignal = single<Array<ICourse>>();
   courseSignal = signal<ICourse[]>([]);
+  //coursesComputed = computed(() => this.courses);
+  //coursesComputed = computed(() => this.courses.map(a => ({ ...a, name: "#" + a.name })));
+  coursesComputed = computed(() => {
+    if (this.searchText()) {
+      return this.courses.filter(c => c.name?.includes(this.searchText().toLowerCase())).map(a => ({ ...a, name: "#" + a.name }));
+    } else {
+      return this.courses.map(a => ({ ...a, name: "#" + a.name }));
+    }
+  });
+  searchText = signal<string>('');
   //firestore = inject(Firestore);
   private changeDetectorRef = inject(ChangeDetectorRef);
   constructor(
@@ -60,5 +70,9 @@ export class CourseListComponent implements OnInit, AfterViewInit {
   }
   ClickMe() {
 
+  }
+  UpdateSearchText(value: string) {
+    debugger
+    this.searchText.set(value);
   }
 }

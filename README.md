@@ -417,3 +417,10 @@ Imperative Programming:focus on what steps make to get result
 ###  115. Angular Signals - Writable signals
 
 can make update or set 
+signal== WritableSignal
+
+###  116. Angular Signals - Computed Signals
+
+Computed Signals  not allowed to make set or update and always depend on other signal 
+
+

@@ -1,4 +1,13 @@
 <div class="container-fluid">
+  <div class="row mx-0 d-flex justify-content-center">
+    <div class="col-4 mt-4">
+      <mat-form-field appearance="outline" class="d-flex w-100">
+        <mat-label>Search </mat-label>
+        <input matInput placeholder="Search by name" type="text" [ngModel]="searchText()"
+          (ngModelChange)="UpdateSearchText($event)" />
+      </mat-form-field>
+    </div>
+  </div>
   <h1>Normal Courses</h1>
   <div class="row">
     @for (course of courses; track course.id) {
@@ -12,6 +21,17 @@
   <h1>Signal Courses</h1>
   <div class="row">
     @for (course of courseSignal(); track course.id) {
+    <div class="col-md-3 col-12">
+      <app-course-card [course]="course" [index]="$index" #card />
+    </div>
+    } @empty {
+    <h1>No Courses Found!</h1>
+    }
+  </div>
+
+  <h1>Computed Signal Courses</h1>
+  <div class="row">
+    @for (course of coursesComputed(); track course.id) {
     <div class="col-md-3 col-12">
       <app-course-card [course]="course" [index]="$index" #card />
     </div>
