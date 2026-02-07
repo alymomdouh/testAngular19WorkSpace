@@ -11,6 +11,7 @@ import { courseResolver } from './shared/resolvers/course.resolver';
 import { ExplanationComponent } from './explanation/explanation.component';
 import { AdvancedCoreFeaturesComponent } from './advanced-core-features/advanced-core-features.component';
 import { AngularSignalsComponent } from './angular-signals/angular-signals.component';
+import { BoardComponent } from './board/board.component';
 
 export const routes: Routes = [
   {
@@ -42,6 +43,10 @@ export const routes: Routes = [
   {
     path: 'angular-signal',
     component: AngularSignalsComponent
+  },
+  {
+    path: 'model-inputs',
+    component: BoardComponent
   },
   {
     path: 'account',

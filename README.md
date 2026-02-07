@@ -454,8 +454,9 @@ the Reasons
 
 ###  122. Signal output - From v17.3
 ```
- addToFavorite = output<void>();
-  // @Output() addToFavorite = new EventEmitter<void>();
+ addToFavorite = output<void>();// new way Signal
+ addToFavorite = output<void>('alias':'testName');// new way Signal
+  // @Output() addToFavorite = new EventEmitter<void>();// old way decorator
 
   <div (click)="addToFavorite.emit()" class="cursor-pointer heart-icon rounded-circle d-flex justify-content-center align-items-center">
             <i class="fa-heart" [ngClass]="course().isFavorite ? 'fa-solid text-danger' : 'fa-regular'"></i>
@@ -468,3 +469,5 @@ the Reasons
     // Call Server
   }    
 ```
+
+###  123. Model inputs - From v17.2
