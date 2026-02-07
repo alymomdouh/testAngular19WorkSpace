@@ -438,3 +438,17 @@ use Effects to track changes inside signals
 
 ###  120. Transform input values - From v16.1
 
+###  121. Why should we use signal inputs and not @Input()?
+// in tsconfigfile 
+```
+ "strictPropertyInitialization": true,
+ "strictNullChecks": true
+```
+
+the Reasons
+1-  signal inputs is more safe than Input decorator
+2-signal inputs can transform with options 
+3- when make signal not need to make in change in change detection it automatic detect and lesson to this position and wait any change
+4- computed signal 
+5-old time to track any change must implement ngonchange but now not need this can make same thing using effect 
+

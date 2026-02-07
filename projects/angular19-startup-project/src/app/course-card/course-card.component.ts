@@ -130,6 +130,11 @@ export class CourseCardComponent implements OnChanges, OnInit, DoCheck,
   // if fail to convert value  take default value
   @Input({ required: true, transform: (value: unknown) => numberAttribute(value, 1) }) counter1 = 0;
 
+  count = input(0, {
+    transform: (value: number | string) => typeof value === 'string' ? parseInt(value) : value
+  },// 0 is initial Value
+  );
+
   name = "viewCourse";
   viewCourse(): void {
     // this.viewCourseEvent.emit(this.course);

@@ -430,7 +430,8 @@
     <div class="col-md-4 col-12">
       <!-- <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="course"  [index]="$index"></app-course-card> -->
       <app-course-card [class.first-course]="first" [class.last-course]="last" [class.even-course]="even"
-        [index]="$index" [class.odd-course]="odd" (viewCourseEvent)="onCourseClicked($event)" [course]="course">
+        [index]="$index" [class.odd-course]="odd" (viewCourseEvent)="onCourseClicked($event)" [course]="course"
+        [disabled]="false" [disabled1]="false" [counter]="0" [counter1]="0" [courseObj]="course">
         view HTML Inside Component Content Projection
       </app-course-card>
     </div>
