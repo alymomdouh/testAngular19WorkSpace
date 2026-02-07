@@ -452,3 +452,19 @@ the Reasons
 4- computed signal 
 5-old time to track any change must implement ngonchange but now not need this can make same thing using effect 
 
+###  122. Signal output - From v17.3
+```
+ addToFavorite = output<void>();
+  // @Output() addToFavorite = new EventEmitter<void>();
+
+  <div (click)="addToFavorite.emit()" class="cursor-pointer heart-icon rounded-circle d-flex justify-content-center align-items-center">
+            <i class="fa-heart" [ngClass]="course().isFavorite ? 'fa-solid text-danger' : 'fa-regular'"></i>
+        </div>
+
+ <app-course-card [course]="course" (addToFavorite)="addToFavorite(course)" />
+
+     addToFavorite(course: ICourse): void {
+    course.isFavorite = !course.isFavorite;
+    // Call Server
+  }    
+```

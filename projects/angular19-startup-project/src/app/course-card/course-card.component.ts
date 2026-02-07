@@ -152,5 +152,10 @@ export class CourseCardComponent implements OnChanges, OnInit, DoCheck,
 
   // to view or access enum in html element
   //get CategoryType() { return CategoryType }
-  CategoryType = CategoryType
+  CategoryType = CategoryType;
+
+  @Output() favoriteClick = new EventEmitter<void>();
+  AddToFavorite(): void {
+    this.favoriteClick.emit();
+  }
 }

@@ -15,15 +15,22 @@
   <div class="col-12 p-4 text-warning text-center">
     <h2>Upcoming Courses!</h2>
   </div>
-  @for (course of newcoursesList; track course.id) {
+  <!-- @for (course of newcoursesList; track course.id) { -->
+  @for (course of coursesSignal(); track $index) {
   <div class="col-2">
     <div class="course text-light p-3 m-3 text-center rounded d-flex align-items-center
               justify-content-center" [class.visited]="course.id === +id">
       <div class="d-flex flex-column">
         <div><i [class]="course.icon"></i></div>
         <div>{{course.name}}</div>
+
       </div>
     </div>
   </div>
+  }@empty {
+  <div class="text-center rounded empty-message p-3">
+    <h4>No Courses Found!</h4>
+  </div>
   }
+
 </div>
