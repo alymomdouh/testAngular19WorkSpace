@@ -471,3 +471,11 @@ the Reasons
 ```
 
 ###  123. Model inputs - From v17.2
+
+###  124. Differences between model() and input()
+
+1- two is depend on input Signal
+2- model is writable Signal and input Signal is readonly Signal
+3- model is two way data binding and input Signal is single way binding 
+
+###  125. Signal queries - View queries - From v17.2

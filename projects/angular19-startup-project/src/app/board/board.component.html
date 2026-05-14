@@ -3,3 +3,9 @@
 canCheck: {{canCheck}}
 
 <app-child-board [(checked)]="canCheck" (checkedChange)="onCheckedChanged($event)" />
+
+<p #p>board works!</p>
+
+@if(showItem) {
+<p #p>board works!</p>
+}
