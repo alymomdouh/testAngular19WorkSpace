@@ -11,6 +11,7 @@ import { firebaseConfig } from './shared/settings/firebase-config';
 import { LoaderInterceptor } from './shared/interceptors/loader.interceptor';
 import { HandleErrorInterceptor } from './shared/interceptors/handle-error-interceptor';
 import { LoggerInterceptor } from './shared/interceptors/logger-interceptor';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,7 +21,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch()),
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideFirestore(() => getFirestore()),
-
+    provideAnimations(),
     importProvidersFrom(
       //   // provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
       //   // provideAuth(() => getAuth()),

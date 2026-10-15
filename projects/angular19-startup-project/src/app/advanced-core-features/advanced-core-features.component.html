@@ -65,7 +65,7 @@
 
 <!--  -->
 <h1 class="mb-0">Creating Configurable Components with ng-template in Angular</h1>
- 
+
 
 <div class="container-fluid">
   <div class="row">
@@ -80,3 +80,22 @@
   <div class="card-text">The content from parent component</div>
 </ng-template>
 
+<!-- video 113  -->
+<h1 class="mb-0">Understanding ngTemplateOutletInjector</h1>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <app-card [cardBodyTemp]="parentBodyTemp" [cardActionTemp]="cardAction" />
+    </div>
+  </div>
+</div>
+
+
+<ng-template #parentBodyTemp>
+  <div class="card-text">The content from parent component</div>
+</ng-template>
+
+<ng-template #cardAction>
+  <app-card-actions />
+</ng-template>

@@ -405,6 +405,79 @@ Imperative Programming:focus on what steps make to get result
 ```
 ###  112. Understanding ngTemplateOutletContext
 
+ 
 ### 113. Understanding ngTemplateOutletInjector - From v14
 
+ 
 
+#####  Section 26: Angular Signals
+
+###  114. Angular Signals - What are signals?
+ 
+ Angular Signals is system used to track the status for element where the change done in the system to optimize 
+
+###  115. Angular Signals - Writable signals
+
+can make update or set 
+signal== WritableSignal
+
+###  116. Angular Signals - Computed Signals
+
+Computed Signals  not allowed to make set or update and always depend on other signal 
+
+
+###  117. Angular Signals - Readonly Signal
+
+
+Readonly Signal like Computed Signals  in not allowed to set or update it 
+but Computed Signals is dynamic depend on this Signal 
+
+###  118. Angular Signals - Effects
+
+use Effects to track changes inside signals 
+
+###  119. Signal inputs
+
+###  120. Transform input values - From v16.1
+
+###  121. Why should we use signal inputs and not @Input()?
+// in tsconfigfile 
+```
+ "strictPropertyInitialization": true,
+ "strictNullChecks": true
+```
+
+the Reasons
+1-  signal inputs is more safe than Input decorator
+2-signal inputs can transform with options 
+3- when make signal not need to make in change in change detection it automatic detect and lesson to this position and wait any change
+4- computed signal 
+5-old time to track any change must implement ngonchange but now not need this can make same thing using effect 
+
+###  122. Signal output - From v17.3
+```
+ addToFavorite = output<void>();// new way Signal
+ addToFavorite = output<void>('alias':'testName');// new way Signal
+  // @Output() addToFavorite = new EventEmitter<void>();// old way decorator
+
+  <div (click)="addToFavorite.emit()" class="cursor-pointer heart-icon rounded-circle d-flex justify-content-center align-items-center">
+            <i class="fa-heart" [ngClass]="course().isFavorite ? 'fa-solid text-danger' : 'fa-regular'"></i>
+        </div>
+
+ <app-course-card [course]="course" (addToFavorite)="addToFavorite(course)" />
+
+     addToFavorite(course: ICourse): void {
+    course.isFavorite = !course.isFavorite;
+    // Call Server
+  }    
+```
+
+###  123. Model inputs - From v17.2
+
+###  124. Differences between model() and input()
+
+1- two is depend on input Signal
+2- model is writable Signal and input Signal is readonly Signal
+3- model is two way data binding and input Signal is single way binding 
+
+###  125. Signal queries - View queries - From v17.2

@@ -1,6 +1,6 @@
 import { KeyValue } from '@angular/common';
-import { Component, Input } from '@angular/core';
-import { ICourseVm } from '../app.component.models';
+import { Component, Input, signal } from '@angular/core';
+import { ICourse, ICourseVm } from '../app.component.models';
 
 @Component({
   selector: 'app-home',
@@ -169,5 +169,6 @@ export class HomeComponent {
     }
   ];
   @Input() id = '';
+  coursesSignal = signal<Array<ICourseVm>>(this.newcoursesList);
 
 }
